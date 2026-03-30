@@ -1,0 +1,19 @@
+node_modules
+dist
+build
+.turbo
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+coverage
+.env
+.env.local
+.env.production
+*.log
+# backend/prisma/migrations
+backend/generated
+storefront/.vercel
+admin/.vercel
+

@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 36 43% 97%;
+  --foreground: 24 23% 18%;
+  --muted: 30 22% 92%;
+  --muted-foreground: 22 15% 41%;
+  --card: 0 0% 100%;
+  --border: 27 23% 85%;
+  --primary: 18 43% 35%;
+  --primary-foreground: 37 100% 97%;
+  --accent: 37 46% 86%;
+  --accent-foreground: 23 28% 22%;
+  --ring: 23 33% 46%;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(227, 197, 171, 0.28), transparent 35%),
+    linear-gradient(180deg, rgba(255, 251, 247, 1) 0%, rgba(250, 246, 241, 1) 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-7xl px-4 pb-24 pt-4 sm:px-6 lg:px-8;
+}
+
+.glass-card {
+  @apply rounded-3xl border border-white/50 bg-white/80 shadow-glow backdrop-blur;
+}
+

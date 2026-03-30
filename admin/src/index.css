@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 20% 98%;
+  --foreground: 222 24% 16%;
+  --muted: 215 26% 94%;
+  --card: 0 0% 100%;
+  --border: 214 18% 87%;
+  --primary: 221 59% 24%;
+  --primary-foreground: 210 40% 98%;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+

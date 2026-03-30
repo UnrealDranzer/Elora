@@ -1,0 +1,26 @@
+{
+  "name": "elora-commerce-platform",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "storefront",
+    "admin"
+  ],
+  "scripts": {
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres",
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:storefront": "npm --workspace storefront run dev",
+    "dev:admin": "npm --workspace admin run dev",
+    "build:backend": "npm --workspace backend run build",
+    "build:storefront": "npm --workspace storefront run build",
+    "build:admin": "npm --workspace admin run build",
+    "lint": "npm --workspace backend run lint && npm --workspace storefront run lint && npm --workspace admin run lint"
+  },
+  "engines": {
+    "node": ">=20.11.0",
+    "npm": ">=10.2.0"
+  }
+}
