@@ -10,7 +10,7 @@ const envSchema = z.object({
   STORE_FRONTEND_URL: z.string().url(),
   ADMIN_FRONTEND_URL: z.string().url(),
   CORS_ALLOWED_ORIGINS: z.string().min(1),
-  COOKIE_DOMAIN: z.string().min(1),
+  COOKIE_DOMAIN: z.string().default(''),
   DATABASE_URL: z.string().min(1),
   JWT_ACCESS_SECRET: z.string().min(32),
   JWT_REFRESH_SECRET: z.string().min(32),
@@ -36,7 +36,12 @@ const envSchema = z.object({
 const parsed = envSchema.safeParse(process.env);
 
 if (!parsed.success) {
-  throw new Error(`Invalid environment configuration: ${parsed.error.message}`);
+  const errors = parsed.error.flatten().fieldErrors;
+  console.error('❌ Missing or invalid environment variables:');
+  for (const [key, msgs] of Object.entries(errors)) {
+    console.error(`   ${key}: ${(msgs as string[]).join(', ')}`);
+  }
+  throw new Error('Server cannot start — fix the environment variables listed above.');
 }
 
 const rawEnv = parsed.data;
