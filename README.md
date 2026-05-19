@@ -1,49 +1,25 @@
-# Elora Commerce Platform
+# Lumiere Dental Atelier
 
-Production-oriented monorepo for the Elora beauty brand storefront, admin console, and backend API.
-
-## Apps
-
-- `backend` - Express + Prisma + PostgreSQL API
-- `storefront` - customer-facing React storefront
-- `admin` - Shopify-inspired React admin console
+Standalone luxury dental clinic website built with React, Vite, Tailwind CSS, Three.js, Framer Motion, and GSAP.
 
 ## Quick start
 
-1. Install dependencies from the repo root:
-
 ```bash
 npm install
+npm run dev
 ```
 
-2. Copy env files:
+Open [http://localhost:5173](http://localhost:5173).
 
-```bash
-cp backend/.env.example backend/.env
-cp storefront/.env.example storefront/.env
-cp admin/.env.example admin/.env
-```
+## Scripts
 
-3. Start PostgreSQL locally:
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Type-check and production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | TypeScript check |
 
-```bash
-npm run db:up
-```
+## Environment
 
-4. Run Prisma:
-
-```bash
-npm --workspace backend run prisma:generate
-npm --workspace backend run prisma:deploy
-npm --workspace backend run prisma:seed
-```
-
-5. Start each app:
-
-```bash
-npm run dev:backend
-npm run dev:storefront
-npm run dev:admin
-```
-
-Detailed setup and deployment guidance lives in [docs/deployment.md](/C:/Users/ADARSH/OneDrive/Documents/New%20project/docs/deployment.md).
+Copy `.env.example` to `.env` and adjust values as needed.

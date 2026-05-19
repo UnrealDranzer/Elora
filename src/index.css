@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 27% 95%;
+  --foreground: 0 0% 10%;
+  --muted: 38 22% 90%;
+  --muted-foreground: 30 8% 42%;
+  --card: 40 30% 97%;
+  --card-muted: 38 24% 92%;
+  --border: 38 18% 86%;
+  --primary: 0 0% 10%;
+  --primary-foreground: 40 27% 95%;
+  --accent: 96 16% 66%;
+  --accent-foreground: 0 0% 10%;
+  --ring: 96 16% 50%;
+  --sage: 96 16% 66%;
+  --ivory: 40 27% 95%;
+  --warm: 38 24% 92%;
+  --charcoal: 0 0% 10%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    background-color: #f6f3ee;
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(26, 26, 26, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  .grain-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-10;
+  }
+
+  .editorial-heading {
+    @apply font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] tracking-[-0.02em] text-foreground font-light;
+  }
+
+  .nav-link {
+    @apply relative text-[0.7rem] uppercase tracking-[0.22em] text-foreground/70 transition-colors duration-300 hover:text-foreground;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-foreground transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .pill-btn-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-medium text-ivory transition hover:bg-charcoal/90;
+  }
+
+  .pill-btn-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-charcoal/15 bg-white/70 px-6 py-3 text-sm font-medium text-charcoal backdrop-blur transition hover:bg-white;
+  }
+
+  .service-card {
+    @apply relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-[1.75rem] p-7 transition duration-500 sm:min-h-[260px] sm:p-9;
+  }
+
+  .trust-divider {
+    @apply text-sage;
+  }
+
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}
+
+.dental-site {
+  cursor: none;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .dental-site {
+    cursor: auto;
+  }
+
+  .grain-overlay {
+    display: none;
+  }
+}
+
+::selection {
+  background: rgba(168, 178, 154, 0.45);
+  color: #1a1a1a;
+}
+
+/* Custom tooth display animations & halo */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 35s linear infinite;
+}
+
+.tooth-halo {
+  position: absolute;
+  inset: 15%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(168, 178, 154, 0.3) 0%, rgba(246, 243, 238, 0) 70%);
+  filter: blur(35px);
+  z-index: 0;
+  pointer-events: none;
+}
