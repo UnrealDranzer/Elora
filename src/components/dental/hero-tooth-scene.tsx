@@ -1,3 +1,4 @@
+"use client";
 import { ContactShadows, Environment, Float, RoundedBox } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useMemo, useRef, useState, useEffect } from 'react';
@@ -154,3 +155,4 @@ export const HeroToothScene = ({ className }: HeroToothSceneProps) => {
     </div>
   );
 };
+

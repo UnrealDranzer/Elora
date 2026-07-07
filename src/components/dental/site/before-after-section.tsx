@@ -1,3 +1,4 @@
+"use client";
 import { BeforeAfterSlider } from '@/components/dental/before-after-slider';
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
@@ -23,3 +24,4 @@ export const BeforeAfterSection = () => (
     </div>
   </section>
 );
+

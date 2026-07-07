@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from 'react';
 
 export const LuxuryCursor = () => {
@@ -54,3 +55,4 @@ export const LuxuryCursor = () => {
     </div>
   );
 };
+

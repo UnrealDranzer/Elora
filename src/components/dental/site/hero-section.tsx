@@ -1,6 +1,8 @@
+"use client";
 import { MagneticAnchor } from '@/components/dental/magnetic-anchor';
 import { siteConfig } from '@/lib/site-config';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowRight, Star } from 'lucide-react';
 
 const stats = [
@@ -76,10 +78,12 @@ export const HeroSection = () => (
           <div className="tooth-halo"></div>
           <div className="absolute inset-0 rounded-full border border-border animate-spin-slow opacity-50"></div>
           <div className="absolute inset-6 rounded-full border border-dashed border-sage/30 animate-spin-slow opacity-60" style={{ animationDirection: 'reverse' }}></div>
-          <img
+          <Image
             alt="3D crystalline tooth"
             className="tooth-img absolute inset-0 w-full h-full object-contain animate-float z-20"
-            loading="eager"
+            priority
+            fill
+            sizes="(max-width: 768px) 320px, (max-width: 1024px) 440px, 560px"
             src="https://static.prod-images.emergentagent.com/jobs/36c9215e-a4b6-41d8-bff4-303e6e84e5cc/images/3fb0c93a7aa84b46db864593123c73d242f94e9d2913910d55e6cdc63282e6c2.png"
           />
           

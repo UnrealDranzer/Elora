@@ -13,3 +13,4 @@ export const FloatingWhatsApp = () => (
     <MessageCircle className="h-6 w-6" />
   </a>
 );
+

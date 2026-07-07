@@ -1,6 +1,9 @@
+"use client";
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 import { useRef } from 'react';
+import drSiddharthImg from '../../../../public/dr-siddharth.png';
 
 export const PhilosophySection = () => {
   const ref = useRef<HTMLElement>(null);
@@ -11,14 +14,16 @@ export const PhilosophySection = () => {
     <section id="philosophy" ref={ref} className="py-28 sm:py-40">
       <div className="section-shell grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-          <motion.div style={{ y: y1 }} className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-float">
-            <img
-              src="/dr-siddharth.png"
+          <motion.div style={{ y: y1 }} className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-float aspect-[4/5] w-full">
+            <Image
+              src={drSiddharthImg}
               alt="Dr. Siddharth Vaish — Prosthodontist & Implantologist at Dantved Clinic"
-              className="aspect-[4/5] w-full object-cover transition-transform duration-[3s] hover:scale-105"
-              loading="lazy"
+              className="object-cover transition-transform duration-[3s] hover:scale-105"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              placeholder="blur"
             />
-            <div className="absolute right-6 top-6 rounded-full border border-white/50 bg-white/80 px-6 py-2.5 text-center shadow-[0_10px_40px_rgba(0,0,0,0.1)] backdrop-blur-md">
+            <div className="absolute right-6 top-6 rounded-full border border-white/50 bg-white/80 px-6 py-2.5 text-center shadow-[0_10px_40px_rgba(0,0,0,0.1)] backdrop-blur-md z-20">
               <p className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground">Founder</p>
               <p className="font-display text-xl">Dr. Siddharth</p>
             </div>

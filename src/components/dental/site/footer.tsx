@@ -1,16 +1,20 @@
 import { siteConfig } from '@/lib/site-config';
 import { Clock, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
+import logoImg from '../../../../public/logo-dantved.png';
 
 export const Footer = () => (
   <footer className="bg-charcoal pt-16 text-ivory">
     <div className="section-shell grid gap-12 pb-14 lg:grid-cols-4">
       <div className="lg:col-span-1">
         {/* Logo in ivory container for dark background, cropped to hide tagline */}
-        <div className="inline-flex rounded-2xl bg-ivory/95 p-3 overflow-hidden h-14 sm:h-16 lg:h-20 items-start">
-          <img
-            src="/logo-dantved.png"
+        <div className="inline-flex rounded-2xl bg-ivory/95 p-3 overflow-hidden h-14 sm:h-16 lg:h-20 items-start relative w-36 sm:w-40 lg:w-48 aspect-[200/54]">
+          <Image
+            src={logoImg}
             alt="Dantved Clinic Logo"
-            className="h-[128%] w-auto max-w-none object-contain object-top"
+            fill
+            sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 200px"
+            className="object-contain object-top p-1"
           />
         </div>
         <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/65">
@@ -33,7 +37,7 @@ export const Footer = () => (
         <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Visit</p>
         <ul className="mt-5 space-y-3 text-sm text-ivory/75">
           <li className="flex gap-2">
-            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sage" />
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
             <a
               href={siteConfig.mapsUrl}
               target="_blank"
@@ -46,13 +50,13 @@ export const Footer = () => (
             </a>
           </li>
           <li className="flex gap-2">
-            <Phone className="h-4 w-4 shrink-0 text-sage" />
+            <Phone className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
             <a href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} className="hover:text-ivory">
               {siteConfig.phone}
             </a>
           </li>
           <li className="flex gap-2">
-            <Mail className="h-4 w-4 shrink-0 text-sage" />
+            <Mail className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
             <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">
               {siteConfig.email}
             </a>
@@ -67,7 +71,7 @@ export const Footer = () => (
           <li>Sunday · {siteConfig.openingHours.sunday}</li>
         </ul>
         <p className="mt-5 flex items-center gap-2 text-xs text-ivory/55">
-          <Clock className="h-3.5 w-3.5 text-sage" />
+          <Clock className="h-3.5 w-3.5 text-sage" aria-hidden="true" />
           Concierge replies within 1 hour
         </p>
       </div>

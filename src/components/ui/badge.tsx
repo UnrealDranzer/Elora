@@ -12,3 +12,4 @@ export const Badge = ({ className, ...props }: HTMLAttributes<HTMLSpanElement>) 
   />
 );
 
+

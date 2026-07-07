@@ -8,3 +8,4 @@ export const SectionLabel = ({ index, title }: SectionLabelProps) => (
     {index} — {title}
   </p>
 );
+

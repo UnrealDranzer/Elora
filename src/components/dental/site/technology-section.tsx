@@ -1,3 +1,4 @@
+"use client";
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
 
@@ -37,3 +38,4 @@ export const TechnologySection = () => (
     </div>
   </section>
 );
+

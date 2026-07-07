@@ -1,9 +1,12 @@
+"use client";
 import { MagneticAnchor } from '@/components/dental/magnetic-anchor';
 import { siteConfig } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowRight, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import logoImg from '../../../../public/logo-dantved.png';
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -39,15 +42,18 @@ export const Navbar = () => {
       )}
     >
       <div className="section-shell flex items-center justify-between gap-4">
-        <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden">
-          <img
-            src="/logo-dantved.png"
+        <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden relative w-32 sm:w-36 lg:w-40 aspect-[200/54]">
+          <Image
+            src={logoImg}
             alt="Dantved Clinic Logo"
-            className="h-[128%] w-auto max-w-none object-contain object-top"
+            fill
+            sizes="(max-width: 640px) 120px, (max-width: 1024px) 150px, 180px"
+            className="object-contain object-top"
+            priority
           />
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main Navigation">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="nav-link">
               {link.label}
@@ -86,7 +92,7 @@ export const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden border-t border-charcoal/5 bg-ivory/95 backdrop-blur-xl lg:hidden"
           >
-            <nav className="section-shell flex flex-col gap-1 py-6">
+            <nav className="section-shell flex flex-col gap-1 py-6" aria-label="Mobile Navigation">
               {links.map((link) => (
                 <a
                   key={link.href}

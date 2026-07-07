@@ -1,12 +1,18 @@
+"use client";
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const MotionLink = motion(Link);
 
 type Service = {
   title: string;
   description: string;
   image: string;
+  slug: string;
   dark?: boolean;
   className?: string;
 };
@@ -16,6 +22,7 @@ const services: Service[] = [
     title: 'Full Mouth Rehabilitation',
     description: 'Comprehensive care. Complete smile transformation.',
     image: '/treatments/full-mouth-rehabilitation.png',
+    slug: 'full-mouth-rehabilitation',
     dark: true,
     className: 'lg:col-span-5 lg:row-span-2'
   },
@@ -23,24 +30,28 @@ const services: Service[] = [
     title: 'Veneers',
     description: 'Ultra-thin. Natural looking. Transforming smiles beautifully.',
     image: '/treatments/veneers.png',
+    slug: 'veneers',
     className: 'lg:col-span-7'
   },
   {
     title: 'Smile Designing',
     description: 'Enhancing smiles. Elevating confidence.',
     image: '/treatments/smile-designing.png',
+    slug: 'smile-designing',
     className: 'lg:col-span-7'
   },
   {
     title: 'Dental Implants',
     description: 'Strong foundations. Confident smiles.',
     image: '/treatments/dental-implants.png',
+    slug: 'dental-implants',
     className: 'lg:col-span-5'
   },
   {
     title: 'Crowns & Bridges',
     description: 'Restore strength. Recreate perfect smiles.',
     image: '/treatments/crowns-bridges.png',
+    slug: 'crowns-bridges',
     dark: true,
     className: 'lg:col-span-7'
   }
@@ -65,8 +76,8 @@ export const ServicesSection = () => (
       <div className="grid gap-4 lg:grid-cols-12">
         {services.map((service, i) => {
           return (
-            <motion.a
-              href="#booking"
+            <MotionLink
+              href={`/services/${service.slug}`}
               key={service.title}
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,11 +94,11 @@ export const ServicesSection = () => (
             >
               {/* Treatment Image — clean photo, no text */}
               <div className="treatment-card-image-wrapper">
-                <img
+                <Image
                   src={service.image}
                   alt={service.title}
-                  loading="lazy"
-                  decoding="async"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="treatment-card-image"
                 />
                 <div className={cn(
@@ -114,7 +125,7 @@ export const ServicesSection = () => (
                   service.dark ? 'text-ivory/60 group-hover:text-ivory' : 'text-charcoal/35 group-hover:text-sage'
                 )}
               />
-            </motion.a>
+            </MotionLink>
           );
         })}
       </div>

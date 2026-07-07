@@ -1,3 +1,4 @@
+"use client";
 import { LuxuryCursor } from '@/components/dental/luxury-cursor';
 import { BeforeAfterSection } from '@/components/dental/site/before-after-section';
 import { BookingSection } from '@/components/dental/site/booking-section';
@@ -50,3 +51,4 @@ export const LuxuryDentalSite = () => {
     </div>
   );
 };
+

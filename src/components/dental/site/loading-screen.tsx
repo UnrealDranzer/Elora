@@ -1,3 +1,4 @@
+"use client";
 import { siteConfig } from '@/lib/site-config';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -33,3 +34,4 @@ export const LoadingScreen = () => {
     </AnimatePresence>
   );
 };
+

@@ -1,5 +1,9 @@
+"use client";
 import { cn } from '@/lib/utils';
 import { useCallback, useRef, useState } from 'react';
+import Image from 'next/image';
+import beforeImg from '../../../public/before-after/before.jpg';
+import afterImg from '../../../public/before-after/after.jpg';
 
 type BeforeAfterSliderProps = {
   className?: string;
@@ -38,9 +42,12 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
         className="absolute inset-0"
         aria-label="Before treatment"
       >
-        <img 
-          src="/before-after/before.jpg" 
-          alt="Before"
+        <Image 
+          src={beforeImg} 
+          alt="Before dental treatment"
+          placeholder="blur"
+          fill
+          sizes="(max-width: 768px) 100vw, 576px"
           className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
         />
       </div>
@@ -51,9 +58,12 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         aria-label="After treatment"
       >
-         <img 
-          src="/before-after/after.jpg" 
-          alt="After"
+         <Image 
+          src={afterImg} 
+          alt="After dental treatment"
+          placeholder="blur"
+          fill
+          sizes="(max-width: 768px) 100vw, 576px"
           className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
         />
       </div>

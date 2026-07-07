@@ -1,3 +1,4 @@
+"use client";
 import {
   Accordion,
   AccordionContent,
@@ -7,7 +8,16 @@ import {
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
 
-const faqs = [
+type FaqItem = {
+  q: string;
+  a: string;
+};
+
+type FaqSectionProps = {
+  faqs?: FaqItem[];
+};
+
+const defaultFaqs: FaqItem[] = [
   {
     q: 'Is treatment painless?',
     a: 'Yes. We use gentle anesthesia, noise-cancelling comfort, and paced visits so you remain calm throughout every procedure.'
@@ -26,27 +36,31 @@ const faqs = [
   }
 ];
 
-export const FaqSection = () => (
-  <section id="faq" className="bg-warm/40 py-24 sm:py-32">
-    <div className="section-shell grid gap-12 lg:grid-cols-2">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-      >
-        <SectionLabel index="07" title="FAQ" />
-        <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.25rem)] leading-tight">
-          Questions, answered with clarity.
-        </h2>
-      </motion.div>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((item) => (
-          <AccordionItem key={item.q} value={item.q}>
-            <AccordionTrigger className="font-display text-xl">{item.q}</AccordionTrigger>
-            <AccordionContent>{item.a}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  </section>
-);
+export const FaqSection = ({ faqs }: FaqSectionProps) => {
+  const displayFaqs = faqs ?? defaultFaqs;
+
+  return (
+    <section id="faq" className="bg-warm/40 py-24 sm:py-32">
+      <div className="section-shell grid gap-12 lg:grid-cols-2">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <SectionLabel index="07" title="FAQ" />
+          <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.25rem)] leading-tight">
+            Questions, answered with clarity.
+          </h2>
+        </motion.div>
+        <Accordion type="single" collapsible className="w-full">
+          {displayFaqs.map((item) => (
+            <AccordionItem key={item.q} value={item.q}>
+              <AccordionTrigger className="font-display text-xl">{item.q}</AccordionTrigger>
+              <AccordionContent>{item.a}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+};

@@ -6,3 +6,4 @@ export const Card = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) =>
   <div className={cn('glass-card', className)} {...props} />
 );
 
+

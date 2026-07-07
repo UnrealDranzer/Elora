@@ -1,3 +1,4 @@
+"use client";
 import { MagneticAnchor } from '@/components/dental/magnetic-anchor';
 import { siteConfig } from '@/lib/site-config';
 import { motion } from 'framer-motion';
@@ -53,3 +54,4 @@ export const BookingSection = () => (
     </div>
   </section>
 );
+
