@@ -78,7 +78,7 @@ export const HeroSection = () => (
           <div className="absolute inset-6 rounded-full border border-dashed border-sage/30 animate-spin-slow opacity-60" style={{ animationDirection: 'reverse' }}></div>
           <img
             alt="3D crystalline tooth"
-            className="tooth-img absolute inset-0 w-full h-full object-contain animate-float"
+            className="tooth-img absolute inset-0 w-full h-full object-contain animate-float z-20"
             loading="eager"
             src="https://static.prod-images.emergentagent.com/jobs/36c9215e-a4b6-41d8-bff4-303e6e84e5cc/images/3fb0c93a7aa84b46db864593123c73d242f94e9d2913910d55e6cdc63282e6c2.png"
           />
@@ -87,7 +87,7 @@ export const HeroSection = () => (
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-8 -left-2 sm:-left-8 bg-ivory/90 backdrop-blur border border-border rounded-2xl px-4 py-3 shadow-sm"
+            className="absolute top-8 -left-2 sm:-left-8 bg-ivory/90 backdrop-blur border border-border rounded-2xl px-4 py-3 shadow-sm z-10"
           >
             <p className="text-[10px] uppercase tracking-widest text-sage font-semibold">Precision</p>
             <p className="text-sm font-medium text-charcoal">0.02mm CAD/CAM</p>
@@ -97,7 +97,7 @@ export const HeroSection = () => (
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute bottom-12 -right-2 sm:-right-6 bg-charcoal text-ivory rounded-2xl px-4 py-3 shadow-md"
+            className="absolute bottom-12 -right-2 sm:-right-6 bg-charcoal text-ivory rounded-2xl px-4 py-3 shadow-md z-10"
           >
             <p className="text-[10px] uppercase tracking-widest text-[#D4C3B3] font-semibold">Comfort</p>
             <p className="text-sm font-medium">Painless protocol</p>

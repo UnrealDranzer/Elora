@@ -39,13 +39,12 @@ export const Navbar = () => {
       )}
     >
       <div className="section-shell flex items-center justify-between gap-4">
-        <a href="#" className="flex items-baseline gap-2">
-          <span className="font-display text-2xl tracking-[0.04em] text-charcoal sm:text-[1.65rem]">
-            {siteConfig.name}
-          </span>
-          <span className="text-[0.55rem] font-medium uppercase tracking-[0.38em] text-muted-foreground">
-            {siteConfig.tagline}
-          </span>
+        <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden">
+          <img
+            src="/logo-dantved.png"
+            alt="Dantved Clinic Logo"
+            className="h-[128%] w-auto max-w-none object-contain object-top"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

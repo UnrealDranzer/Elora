@@ -23,7 +23,7 @@ export const BookingSection = () => (
             </h2>
             <p className="mt-5 max-w-lg text-sm leading-relaxed text-ivory/75">
               Reserve through our concierge desk or message us on WhatsApp. Same-week visits for new patients across
-              Bengaluru.
+              Navi Mumbai.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">

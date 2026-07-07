@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 
 import { AppRouter } from './routes/AppRouter';
 import './index.css';
+import { Agentation } from 'agentation';
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isCoarse = window.matchMedia('(pointer: coarse)').matches;
@@ -30,5 +31,6 @@ if (!prefersReduced && !isCoarse) {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AppRouter />
+    <Agentation />
   </React.StrictMode>
 );

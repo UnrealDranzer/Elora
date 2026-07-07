@@ -5,22 +5,27 @@ export const Footer = () => (
   <footer className="bg-charcoal pt-16 text-ivory">
     <div className="section-shell grid gap-12 pb-14 lg:grid-cols-4">
       <div className="lg:col-span-1">
-        <p className="font-display text-3xl tracking-[0.06em]">{siteConfig.name}</p>
-        <p className="mt-1 text-[0.55rem] uppercase tracking-[0.38em] text-ivory/50">{siteConfig.tagline}</p>
+        {/* Logo in ivory container for dark background, cropped to hide tagline */}
+        <div className="inline-flex rounded-2xl bg-ivory/95 p-3 overflow-hidden h-14 sm:h-16 lg:h-20 items-start">
+          <img
+            src="/logo-dantved.png"
+            alt="Dantved Clinic Logo"
+            className="h-[128%] w-auto max-w-none object-contain object-top"
+          />
+        </div>
         <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/65">
           A quiet studio for slow, considered dentistry — sculpting smiles the way they should be made.
         </p>
         <div className="mt-6 flex gap-3">
-          {[0, 1, 2].map((i) => (
-            <a
-              key={i}
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/15 text-ivory/70 transition hover:border-ivory/40 hover:text-ivory"
-              aria-label="Social link"
-            >
-              <Instagram className="h-4 w-4" />
-            </a>
-          ))}
+          <a
+            href={siteConfig.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/15 text-ivory/70 transition hover:border-ivory/40 hover:text-ivory"
+            aria-label="Follow us on Instagram"
+          >
+            <Instagram className="h-4 w-4" />
+          </a>
         </div>
       </div>
 
@@ -58,9 +63,8 @@ export const Footer = () => (
       <div>
         <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Hours</p>
         <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-          <li>Mon – Fri · 9:00 – 20:00</li>
-          <li>Saturday · 10:00 – 18:00</li>
-          <li>Sunday · By appointment</li>
+          <li>Mon – Sat · {siteConfig.openingHours.weekdays}</li>
+          <li>Sunday · {siteConfig.openingHours.sunday}</li>
         </ul>
         <p className="mt-5 flex items-center gap-2 text-xs text-ivory/55">
           <Clock className="h-3.5 w-3.5 text-sage" />
@@ -77,6 +81,7 @@ export const Footer = () => (
             className="h-44 w-full grayscale invert"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
           />
         </div>
       </div>

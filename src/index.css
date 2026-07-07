@@ -88,6 +88,54 @@
     @apply relative flex min-h-[220px] flex-col justify-between overflow-hidden rounded-[1.75rem] p-7 transition duration-500 sm:min-h-[260px] sm:p-9;
   }
 
+  /* Treatment card image — clean photos, object-fit: cover */
+  .treatment-card-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .treatment-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+
+  .service-card:hover .treatment-card-image {
+    transform: scale(1.03);
+  }
+
+  .treatment-card-image-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to right, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 45%, var(--tw-gradient-to) 100%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 639px) {
+    .treatment-card-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: 160px;
+      border-radius: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .treatment-card-image-gradient {
+      background: linear-gradient(to top, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 50%, var(--tw-gradient-to) 100%);
+    }
+  }
+
   .trust-divider {
     @apply text-sage;
   }
@@ -116,18 +164,27 @@
   color: #1a1a1a;
 }
 
-/* Custom tooth display animations & halo */
+/* Realistic floating animation with rotation + drift */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) translateX(3px) rotate(0.8deg);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-18px) translateX(-2px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translateY(-8px) translateX(4px) rotate(0.4deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
 
 @keyframes spin-slow {

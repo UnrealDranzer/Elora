@@ -13,10 +13,6 @@ const faqs = [
     a: 'Yes. We use gentle anesthesia, noise-cancelling comfort, and paced visits so you remain calm throughout every procedure.'
   },
   {
-    q: 'Do you accept insurance?',
-    a: 'We work with major Indian insurers and provide transparent estimates before treatment begins. Our concierge can guide your claims.'
-  },
-  {
     q: 'How fast can I get an appointment?',
     a: 'Same-week consultations are often available for new patients. Virtual assessments can begin within 24 hours.'
   },

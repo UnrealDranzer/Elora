@@ -6,7 +6,6 @@ export const PhilosophySection = () => {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
   const y1 = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [80, -20]);
 
   return (
     <section id="philosophy" ref={ref} className="py-28 sm:py-40">
@@ -15,7 +14,7 @@ export const PhilosophySection = () => {
           <motion.div style={{ y: y1 }} className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-float">
             <img
               src="/dr-siddharth.png"
-              alt="Lead clinician Dr. Siddharth Vedpath at Dantved Clinic"
+              alt="Dr. Siddharth Vaish — Prosthodontist & Implantologist at Dantved Clinic"
               className="aspect-[4/5] w-full object-cover transition-transform duration-[3s] hover:scale-105"
               loading="lazy"
             />
@@ -24,17 +23,6 @@ export const PhilosophySection = () => {
               <p className="font-display text-xl">Dr. Siddharth</p>
             </div>
           </motion.div>
-          <motion.div
-            style={{ y: y2 }}
-            className="absolute -bottom-16 -left-8 z-20 w-[65%] overflow-hidden rounded-[2rem] border-[6px] border-[#F6F3EE] shadow-[0_30px_60px_rgba(26,26,26,0.15)] sm:-left-12"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80"
-              alt="Serene clinic interior"
-              className="aspect-[4/3] w-full object-cover transition-transform duration-[3s] hover:scale-105"
-              loading="lazy"
-            />
-          </motion.div>
         </div>
 
         <motion.div
@@ -42,32 +30,71 @@ export const PhilosophySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:pt-16"
+          className="lg:pt-8"
         >
-          <SectionLabel index="03" title="Our Philosophy" />
-          <h2 className="mt-6 font-display text-[clamp(2.5rem,5.5vw,4rem)] leading-[1.05] tracking-tight">
-            Dentistry as a <em className="font-light italic text-charcoal/90">slow craft</em>, not a clinical transaction.
-          </h2>
+          <SectionLabel index="03" title="Meet Our Specialist" />
+          
           <p className="mt-8 text-lg leading-[1.8] text-muted-foreground sm:text-xl">
-            Dantved began as a quiet rebellion against the cold dental waiting room — fluorescent lighting, brisk hands,
-            and a transactional pace. We rebuilt the experience from scratch around softness, slowness, and absolute craft.
+            At Dantved, dentistry is not rushed. It is <em className="font-light italic text-charcoal/90">thoughtful, precise</em> and <em className="font-light italic text-charcoal/90">deeply patient-centric</em>. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.
           </p>
-          <blockquote className="mt-12 border-l-[3px] border-sage/60 pl-8">
-            <p className="font-display text-[1.65rem] italic leading-[1.4] text-charcoal/90 sm:text-3xl">
-              "We hand-sculpt every restoration the way a fine jeweler would — because your smile is a heirloom you wear every single day."
-            </p>
-            <footer className="mt-6 text-[0.7rem] uppercase tracking-[0.3em] text-muted-foreground/80">
-              — Dr. Siddharth Vedpath, BDS, MDS (Prosthodontics)
-            </footer>
-          </blockquote>
-          <div className="mt-16 grid grid-cols-2 gap-10 border-t border-charcoal/10 pt-10">
-            <div>
-              <p className="font-display text-5xl sm:text-6xl text-charcoal">98%</p>
-              <p className="mt-2 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground">Patients return</p>
+
+          <div className="mt-10">
+            <h2 className="font-display text-4xl text-charcoal sm:text-5xl">Dr. Siddharth Vaish</h2>
+            <p className="mt-2 text-lg font-medium text-sage sm:text-xl">Prosthodontist & Implantologist</p>
+            <div className="mt-6 h-px w-16 bg-sage/40"></div>
+          </div>
+
+          <p className="mt-6 text-base leading-[1.8] text-muted-foreground">
+            Focused on restoring function and aesthetics through advanced prosthodontic and implant treatments with precision, longevity and patient-centric care.
+          </p>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 border-t border-charcoal/10 pt-10">
+            <div className="flex gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-medium text-charcoal text-sm">B.D.S.</p>
+                <p className="mt-1 text-xs text-muted-foreground">Babu Banarasi Das University, Lucknow</p>
+              </div>
             </div>
-            <div>
-              <p className="font-display text-5xl sm:text-6xl text-charcoal">Top 1%</p>
-              <p className="mt-2 text-[0.65rem] uppercase tracking-[0.3em] text-muted-foreground">In the metro region</p>
+
+            <div className="flex gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-medium text-charcoal text-sm">M.D.S. Prosthodontics</p>
+                <p className="mt-1 text-xs text-muted-foreground">Bareilly International University</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-medium text-charcoal text-sm">Ex-Mentor</p>
+                <p className="mt-1 text-xs text-muted-foreground">Kosmo Dental Academy, Hyderabad</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sage/10 text-sage">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-medium text-charcoal text-sm">Ex-Consultant</p>
+                <p className="mt-1 text-xs text-muted-foreground">Sree Implant Maxillofacial & Dental Hospital, Hyderabad</p>
+              </div>
             </div>
           </div>
         </motion.div>

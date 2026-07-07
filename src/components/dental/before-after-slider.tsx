@@ -22,7 +22,7 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
     <div
       ref={containerRef}
       className={cn(
-        'relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2.5rem] bg-card shadow-float touch-none select-none group',
+        'relative aspect-[3/2] w-full max-w-xl overflow-hidden rounded-[2.5rem] bg-card shadow-float touch-none select-none group',
         className
       )}
       onPointerMove={(e) => dragging.current && updatePosition(e.clientX)}
@@ -33,16 +33,15 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
         dragging.current = false;
       }}
     >
-      {/* Before Image (Yellowed/Dull via CSS filter for realism) */}
+      {/* Before Image */}
       <div
         className="absolute inset-0"
         aria-label="Before treatment"
       >
         <img 
-          src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80" 
+          src="/before-after/before.jpg" 
           alt="Before"
           className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
-          style={{ filter: 'sepia(35%) brightness(85%) contrast(95%) saturate(130%) hue-rotate(-10deg)' }}
         />
       </div>
 
@@ -53,7 +52,7 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
         aria-label="After treatment"
       >
          <img 
-          src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80" 
+          src="/before-after/after.jpg" 
           alt="After"
           className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
         />

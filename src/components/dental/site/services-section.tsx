@@ -1,61 +1,46 @@
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import {
-  ArrowUpRight,
-  Baby,
-  Gem,
-  Sparkles,
-  Stethoscope,
-  Sun,
-  Wrench
-} from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 type Service = {
   title: string;
   description: string;
-  icon: LucideIcon;
+  image: string;
   dark?: boolean;
   className?: string;
 };
 
 const services: Service[] = [
   {
-    title: 'Dental Implants',
-    description: 'Surgical-grade titanium roots paired with zirconia crowns sculpted by hand.',
-    icon: Wrench,
+    title: 'Full Mouth Rehabilitation',
+    description: 'Comprehensive care. Complete smile transformation.',
+    image: '/treatments/full-mouth-rehabilitation.png',
     dark: true,
     className: 'lg:col-span-5 lg:row-span-2'
   },
   {
-    title: 'Smile Design',
-    description: 'Veneers, whitening, and contouring tailored to your facial geometry.',
-    icon: Sparkles,
+    title: 'Veneers',
+    description: 'Ultra-thin. Natural looking. Transforming smiles beautifully.',
+    image: '/treatments/veneers.png',
     className: 'lg:col-span-7'
   },
   {
-    title: 'Invisalign',
-    description: 'Clear aligners planned by AI-assisted 3D modeling for discreet correction.',
-    icon: Gem,
+    title: 'Smile Designing',
+    description: 'Enhancing smiles. Elevating confidence.',
+    image: '/treatments/smile-designing.png',
     className: 'lg:col-span-7'
   },
   {
-    title: 'Root Canal',
-    description: 'Microscopic precision with spa-level comfort protocols and gentle anesthesia.',
-    icon: Stethoscope,
+    title: 'Dental Implants',
+    description: 'Strong foundations. Confident smiles.',
+    image: '/treatments/dental-implants.png',
     className: 'lg:col-span-5'
   },
   {
-    title: 'Teeth Whitening',
-    description: 'Gradual brightening rituals with enamel-safe lasers and post-care coaching.',
-    icon: Sun,
-    className: 'lg:col-span-5'
-  },
-  {
-    title: 'Pediatric Dentistry',
-    description: 'A calm, playful journey for little ones — built on trust, not fear.',
-    icon: Baby,
+    title: 'Crowns & Bridges',
+    description: 'Restore strength. Recreate perfect smiles.',
+    image: '/treatments/crowns-bridges.png',
     dark: true,
     className: 'lg:col-span-7'
   }
@@ -79,7 +64,6 @@ export const ServicesSection = () => (
 
       <div className="grid gap-4 lg:grid-cols-12">
         {services.map((service, i) => {
-          const Icon = service.icon;
           return (
             <motion.a
               href="#booking"
@@ -97,17 +81,27 @@ export const ServicesSection = () => (
                 service.className
               )}
             >
-              <Icon 
-                className={cn(
-                  'h-6 w-6 transition-transform duration-[600ms] group-hover:scale-110 group-hover:-rotate-3', 
-                  service.dark ? 'text-ivory/80 group-hover:text-ivory' : 'text-charcoal/50 group-hover:text-sage'
-                )} 
-                strokeWidth={1.5} 
-              />
-              <div className="relative z-10 mt-12 sm:mt-16">
+              {/* Treatment Image — clean photo, no text */}
+              <div className="treatment-card-image-wrapper">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="treatment-card-image"
+                />
+                <div className={cn(
+                  'treatment-card-image-gradient',
+                  service.dark
+                    ? 'from-charcoal via-charcoal/60 to-charcoal/0'
+                    : 'from-[#f0ebe3] via-[#f0ebe3]/60 to-[#f0ebe3]/0'
+                )} />
+              </div>
+
+              <div className="relative z-10 mt-auto">
                 <h3 className="font-display text-3xl tracking-tight sm:text-[2.25rem]">{service.title}</h3>
                 <p className={cn(
-                  'mt-3 max-w-sm text-sm leading-relaxed transition-colors duration-[600ms]', 
+                  'mt-3 max-w-[16rem] text-sm leading-relaxed transition-colors duration-[600ms]', 
                   service.dark ? 'text-ivory/75 group-hover:text-ivory/90' : 'text-muted-foreground group-hover:text-charcoal/70'
                 )}>
                   {service.description}
