@@ -50,7 +50,7 @@ const services: Service[] = [
   },
   {
     title: 'Clear Aligners',
-    description: 'Straighten your smile comfortably using nearly invisible custom aligners designed for everyday life.',
+    description: 'Invisible custom aligners designed for everyday life.',
     image: '/treatments/clear-aligners.png',
     slug: 'clear-aligners',
     dark: true,

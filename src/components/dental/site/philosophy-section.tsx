@@ -25,7 +25,7 @@ export const PhilosophySection = () => {
             />
             <div className="absolute right-6 top-6 rounded-full border border-white/50 bg-white/80 px-6 py-2.5 text-center shadow-[0_10px_40px_rgba(0,0,0,0.1)] backdrop-blur-md z-20">
               <p className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground">Founder</p>
-              <p className="font-display text-xl">Dr. Siddharth</p>
+              <p className="font-display text-xl">Dr. Siddharth Vaish</p>
             </div>
           </motion.div>
         </div>
@@ -40,7 +40,7 @@ export const PhilosophySection = () => {
           <SectionLabel index="05" title="Meet Our Specialist" />
           
           <p className="mt-8 text-lg leading-[1.8] text-muted-foreground sm:text-xl">
-            At Dantved, dentistry is not rushed. It is <em className="font-light italic text-charcoal/90">thoughtful, precise</em> and <em className="font-light italic text-charcoal/90">deeply patient-centric</em>. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.
+            At Dantved, dentistry is not rushed. It is thoughtful, precise and deeply patient-centric. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.
           </p>
 
           <div className="mt-10">

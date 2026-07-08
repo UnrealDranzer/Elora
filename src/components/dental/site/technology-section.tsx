@@ -6,7 +6,7 @@ const tech = [
   { num: '01', title: '3D intraoral scanning', desc: 'Accurate digital impressions without messy moulds.' },
   { num: '02', title: 'AI-assisted diagnostics', desc: 'Early detection mapping for caries, gum health, and bone density.' },
   { num: '03', title: 'Digital smile design', desc: 'Preview your future smile in real time before treatment begins.' },
-  { num: '04', title: 'Laser dentistry', desc: 'Gentle tissue sculpting with faster healing and minimal discomfort.' }
+  { num: '04', title: 'Guided Implant Surgery', desc: 'Pain free implant placement with precision and technology.' }
 ];
 
 export const TechnologySection = () => (
@@ -15,7 +15,7 @@ export const TechnologySection = () => (
       <div className="mb-14 max-w-2xl">
         <SectionLabel index="04" title="Technology" />
         <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight">
-          Precision instruments, <em className="italic">invisible complexity.</em>
+          Precision instruments, <em className="italic">invisible complexity</em>
         </h2>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
@@ -38,4 +38,3 @@ export const TechnologySection = () => (
     </div>
   </section>
 );
-
