@@ -1,4 +1,5 @@
 "use client";
+import { useState } from 'react';
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -48,14 +49,39 @@ const services: Service[] = [
     className: 'lg:col-span-5'
   },
   {
-    title: 'Crowns & Bridges',
-    description: 'Restore strength. Recreate perfect smiles.',
-    image: '/treatments/crowns-bridges.png',
-    slug: 'crowns-bridges',
+    title: 'Clear Aligners',
+    description: 'Straighten your smile comfortably using nearly invisible custom aligners designed for everyday life.',
+    image: '/treatments/clear-aligners.png',
+    slug: 'clear-aligners',
     dark: true,
     className: 'lg:col-span-7'
   }
 ];
+
+const ServiceCardImage = ({ src, alt, dark }: { src: string; alt: string; dark?: boolean }) => {
+  const [loaded, setLoaded] = useState(false);
+  return (
+    <div className="treatment-card-image-wrapper">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        onLoad={() => setLoaded(true)}
+        className={cn(
+          "treatment-card-image transition-opacity duration-500 ease-out",
+          loaded ? "opacity-100" : "opacity-0"
+        )}
+      />
+      <div className={cn(
+        'treatment-card-image-gradient',
+        dark
+          ? 'from-charcoal via-charcoal/60 to-charcoal/0'
+          : 'from-[#f0ebe3] via-[#f0ebe3]/60 to-[#f0ebe3]/0'
+      )} />
+    </div>
+  );
+};
 
 export const ServicesSection = () => (
   <section id="services" className="py-24 sm:py-32">
@@ -65,7 +91,7 @@ export const ServicesSection = () => (
           <SectionLabel index="02" title="Treatments" />
           <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.75rem)] leading-[1.05] text-charcoal">
             A full studio of care,{' '}
-            <em className="font-normal italic text-charcoal/80">without the clinical chill.</em>
+            <em className="font-normal italic text-charcoal/80">without the clinical fear</em>
           </h2>
         </div>
         <p className="max-w-md text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -93,21 +119,7 @@ export const ServicesSection = () => (
               )}
             >
               {/* Treatment Image — clean photo, no text */}
-              <div className="treatment-card-image-wrapper">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="treatment-card-image"
-                />
-                <div className={cn(
-                  'treatment-card-image-gradient',
-                  service.dark
-                    ? 'from-charcoal via-charcoal/60 to-charcoal/0'
-                    : 'from-[#f0ebe3] via-[#f0ebe3]/60 to-[#f0ebe3]/0'
-                )} />
-              </div>
+              <ServiceCardImage src={service.image} alt={service.title} dark={service.dark} />
 
               <div className="relative z-10 mt-auto">
                 <h3 className="font-display text-3xl tracking-tight sm:text-[2.25rem]">{service.title}</h3>

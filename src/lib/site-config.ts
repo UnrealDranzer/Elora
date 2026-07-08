@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Dantved',
   tagline: 'Clinic',
-  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? 'https://dentflow.app/book',
+  bookingUrl: 'https://appointment.docplix.com/doctor/dpx5952',
   whatsappUrl:
     process.env.NEXT_PUBLIC_WHATSAPP_URL ??
     'https://wa.me/918143789587?text=Hello%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Dantved%20Clinic.',

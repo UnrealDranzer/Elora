@@ -13,6 +13,8 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(54);
   const dragging = useRef(false);
+  const [beforeLoaded, setBeforeLoaded] = useState(false);
+  const [afterLoaded, setAfterLoaded] = useState(false);
 
   const updatePosition = useCallback((clientX: number) => {
     const container = containerRef.current;
@@ -48,7 +50,12 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
           placeholder="blur"
           fill
           sizes="(max-width: 768px) 100vw, 576px"
-          className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+          onLoad={() => setBeforeLoaded(true)}
+          style={{ objectPosition: 'center 42%' }}
+          className={cn(
+            "h-full w-full object-cover transition-all duration-[2s] group-hover:scale-105 ease-out",
+            beforeLoaded ? "opacity-100" : "opacity-0"
+          )}
         />
       </div>
 
@@ -64,7 +71,11 @@ export const BeforeAfterSlider = ({ className }: BeforeAfterSliderProps) => {
           placeholder="blur"
           fill
           sizes="(max-width: 768px) 100vw, 576px"
-          className="h-full w-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+          onLoad={() => setAfterLoaded(true)}
+          className={cn(
+            "h-full w-full object-cover transition-all duration-[2s] group-hover:scale-105 ease-out",
+            afterLoaded ? "opacity-100" : "opacity-0"
+          )}
         />
       </div>
 

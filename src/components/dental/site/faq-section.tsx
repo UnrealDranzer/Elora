@@ -19,20 +19,40 @@ type FaqSectionProps = {
 
 const defaultFaqs: FaqItem[] = [
   {
-    q: 'Is treatment painless?',
-    a: 'Yes. We use gentle anesthesia, noise-cancelling comfort, and paced visits so you remain calm throughout every procedure.'
+    q: 'Do I need an appointment before visiting?',
+    a: 'Appointments are recommended to reduce waiting time and ensure adequate consultation. We accommodate walk-ins, whenever possible, subject to availability.'
   },
   {
-    q: 'How fast can I get an appointment?',
-    a: 'Same-week consultations are often available for new patients. Virtual assessments can begin within 24 hours.'
+    q: 'How often should I visit the dentist?',
+    a: 'A routine dental examination every six months helps detect problems early and maintain good oral health.'
   },
   {
-    q: 'Do you treat children?',
-    a: 'Absolutely. Our pediatric suite is designed for trust-first experiences with playful, unhurried care.'
+    q: 'Do you treat dental emergencies?',
+    a: 'Yes. We provide emergency dental care for severe toothaches, broken teeth, swelling, infections and lost crowns.'
   },
   {
-    q: 'What if I have dental anxiety?',
-    a: 'We offer aromatherapy, weighted blankets, sedation options, and step-by-step explanations to help your nervous system settle.'
+    q: 'Is the clinic equipped with modern technology?',
+    a: 'Yes. We use modern diagnostic and treatment equipment while following strict sterilization and infection control protocols.'
+  },
+  {
+    q: 'Which is better: tooth extraction or root canal?',
+    a: 'Whenever possible, we prefer preserving your natural tooth through root canal treatment. Extraction is considered only when the tooth cannot be saved.'
+  },
+  {
+    q: 'What are dental implants?',
+    a: 'Dental implants are titanium fixtures placed in the jawbone to replace missing tooth roots. They provide a strong foundation for crowns, bridges, or dentures. A clinical examination and imaging help determine bone quality and treatment suitability.'
+  },
+  {
+    q: 'What is a smile makeover?',
+    a: 'A smile makeover combines treatments such as veneers, whitening, crowns, orthodontics, or gum contouring to improve your smile\'s appearance.'
+  },
+  {
+    q: 'How do you ensure patient safety?',
+    a: 'We follow strict sterilization protocols using medical-grade sterilization equipment, disposable materials where appropriate, and internationally accepted infection control practices.'
+  },
+  {
+    q: 'What if I have doctor anxiety?',
+    a: 'We offer aromatherapy, a calm environment, noise-cancelling comfort, weighted cushions, and step-by-step walk-through of the procedure to help your nervous system settle.'
   }
 ];
 

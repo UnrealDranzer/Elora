@@ -22,8 +22,8 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL('https://dantvedclinic.com'),
   title: 'Dantved Clinic | Best Dental Clinic in Airoli, Navi Mumbai',
-  description: 'Dantved Clinic provides dental implants, smile designing, crowns & bridges, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
-  keywords: 'Dental Clinic Navi Mumbai, Dentist Airoli, Dental Implants Navi Mumbai, Smile Designing, Cosmetic Dentistry, Dental Veneers, Crowns and Bridges, Dentures, Root Canal, Teeth Whitening, Painless Dentist, Full Mouth Rehabilitation, Best Prosthodontist, Dr Siddharth Vaish, Dental Implant Specialist, Smile Makeover, Emergency Dentist, Family Dentist, Dental Care Airoli, Dentist Near Me',
+  description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
+  keywords: 'Dental Clinic Navi Mumbai, Dentist Airoli, Dental Implants Navi Mumbai, Smile Designing, Cosmetic Dentistry, Dental Veneers, Clear Aligners, Dentures, Root Canal, Teeth Whitening, Painless Dentist, Full Mouth Rehabilitation, Best Prosthodontist, Dr Siddharth Vaish, Dental Implant Specialist, Smile Makeover, Emergency Dentist, Family Dentist, Dental Care Airoli, Dentist Near Me',
   authors: [{ name: 'Dantved Clinic' }],
   creator: 'Dantved Clinic',
   publisher: 'Dantved Clinic',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Dantved Clinic | Best Dental Clinic in Airoli, Navi Mumbai',
-    description: 'Dantved Clinic provides dental implants, smile designing, crowns & bridges, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
+    description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
     url: 'https://dantvedclinic.com',
     siteName: 'Dantved Clinic',
     images: [
@@ -84,6 +84,16 @@ export default function RootLayout({
       </head>
       <body>
         <AnalyticsReadiness />
+        <div 
+          className="fixed pointer-events-none select-none z-0 opacity-[0.015] top-1/2 right-[-8%] -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] mix-blend-multiply"
+          style={{
+            backgroundImage: 'url(/favicon.png)',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+          aria-hidden="true"
+        />
         <SmoothScrolling>
           {children}
           <AgentationProvider />

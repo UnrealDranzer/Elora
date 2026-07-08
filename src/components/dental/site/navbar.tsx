@@ -19,6 +19,7 @@ const links = [
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [logoLoaded, setLogoLoaded] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -41,27 +42,38 @@ export const Navbar = () => {
         scrolled ? 'border-b border-charcoal/5 bg-ivory/80 py-3 backdrop-blur-xl' : 'bg-transparent py-5'
       )}
     >
-      <div className="section-shell flex items-center justify-between gap-4">
-        <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden relative w-32 sm:w-36 lg:w-40 aspect-[200/54]">
-          <Image
-            src={logoImg}
-            alt="Dantved Clinic Logo"
-            fill
-            sizes="(max-width: 640px) 120px, (max-width: 1024px) 150px, 180px"
-            className="object-contain object-top"
-            priority
-          />
-        </a>
-
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main Navigation">
+      <div className="section-shell flex items-center justify-between lg:grid lg:grid-cols-3 lg:items-center gap-4">
+        {/* Left: Desktop Nav Links */}
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex justify-start" aria-label="Main Navigation">
           {links.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link">
+            <a key={link.href} href={link.href} className="nav-link text-xs xl:text-sm">
               {link.label}
             </a>
           ))}
         </nav>
+        {/* Mobile Spacer (replaces nav links on mobile to keep logo/menu spaced) */}
+        <div className="lg:hidden" />
 
-        <div className="flex items-center gap-3">
+        {/* Center: Logo */}
+        <div className="flex justify-center">
+          <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden relative w-32 sm:w-36 lg:w-40 aspect-[200/54]">
+            <Image
+              src={logoImg}
+              alt="Dantved Clinic Logo"
+              fill
+              sizes="(max-width: 640px) 120px, (max-width: 1024px) 150px, 180px"
+              onLoad={() => setLogoLoaded(true)}
+              className={cn(
+                "object-contain object-top transition-opacity duration-500 ease-out",
+                logoLoaded ? "opacity-100" : "opacity-0"
+              )}
+              priority
+            />
+          </a>
+        </div>
+
+        {/* Right: CTA & Toggle */}
+        <div className="flex items-center justify-end gap-3">
           <MagneticAnchor className="hidden sm:block">
             <a
               href={siteConfig.bookingUrl}

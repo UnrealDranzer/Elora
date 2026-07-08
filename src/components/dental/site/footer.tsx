@@ -7,14 +7,14 @@ export const Footer = () => (
   <footer className="bg-charcoal pt-16 text-ivory">
     <div className="section-shell grid gap-12 pb-14 lg:grid-cols-4">
       <div className="lg:col-span-1">
-        {/* Logo in ivory container for dark background, cropped to hide tagline */}
-        <div className="inline-flex rounded-2xl bg-ivory/95 p-3 overflow-hidden h-14 sm:h-16 lg:h-20 items-start relative w-36 sm:w-40 lg:w-48 aspect-[200/54]">
+        {/* Logo blended directly into dark background, inverted for visibility */}
+        <div className="inline-flex overflow-hidden h-14 sm:h-16 lg:h-20 items-start relative w-36 sm:w-40 lg:w-48 aspect-[200/54]">
           <Image
             src={logoImg}
             alt="Dantved Clinic Logo"
             fill
             sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 200px"
-            className="object-contain object-top p-1"
+            className="object-contain object-top invert brightness-[1.5]"
           />
         </div>
         <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/65">
@@ -78,11 +78,11 @@ export const Footer = () => (
 
       <div>
         <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Find us</p>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-ivory/10">
+        <div className="mt-5 overflow-hidden rounded-2xl border border-ivory/10 shadow-md">
           <iframe
             title="Dantved Clinic location"
             src={siteConfig.mapEmbedUrl}
-            className="h-44 w-full grayscale invert"
+            className="h-44 w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

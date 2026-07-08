@@ -92,29 +92,33 @@ export const servicesData: Record<string, ServiceDetail> = {
       }
     ]
   },
-  'crowns-bridges': {
-    slug: 'crowns-bridges',
-    title: 'Crowns & Bridges',
-    h1: 'Premium Crowns & Bridges in Airoli, Navi Mumbai',
-    description: 'Precision zirconia and ceramic restorations to rebuild tooth strength and integrity.',
-    metaTitle: 'Dental Crowns & Bridges in Airoli | Zirconia restorations',
-    metaDescription: 'Restore damaged or missing teeth with high-strength zirconia and ceramic crowns and bridges at Dantved Clinic. Expertly crafted for comfort, function, and aesthetics.',
-    keywords: 'Dental Crowns Airoli, Zirconia Crown Navi Mumbai, Dental Bridge Specialist, Tooth Cap Airoli',
-    image: '/treatments/crowns-bridges.png',
+  'clear-aligners': {
+    slug: 'clear-aligners',
+    title: 'Clear Aligners',
+    h1: 'Clear Aligners & Invisible Braces in Airoli, Navi Mumbai',
+    description: 'Straighten your smile comfortably using nearly invisible custom aligners designed for everyday life.',
+    metaTitle: 'Clear Aligners in Airoli, Navi Mumbai | Invisible Braces',
+    metaDescription: 'Straighten your teeth comfortably with Clear Aligners at Dantved Clinic, Airoli. Removable, comfortable, and nearly invisible. Book a scan today.',
+    keywords: 'Clear Aligners Airoli, Invisible Braces Navi Mumbai, Transparent Aligners, Orthodontic Teeth Straightening',
+    image: '/treatments/clear-aligners.png',
     dark: true,
     content: [
-      'Dental crowns and bridges are key restorative treatments designed to restore the strength, function, and appearance of severely damaged, fractured, or missing teeth.',
-      'A crown protects a single weakened tooth, shielding it from further breakdown, while a bridge spans the gap left by missing teeth, anchored securely to adjacent healthy teeth or dental implants.',
-      'We use top-grade materials including CAD/CAM-milled Zirconia (monolithic and layered) and E.max lithium disilicate, guaranteeing structural integrity, biocompatibility, and a highly natural finish.'
+      'Clear aligners are a modern, comfortable, and virtually invisible orthodontic solution designed to straighten your teeth and correct your bite without the hassle of traditional metal braces.',
+      'At Dantved Clinic, we use advanced 3D intraoral scans to create a precise digital model of your mouth. We then map out your complete treatment plan, showing you how your teeth will shift step-by-step before your aligners are even fabricated.',
+      'Each set of custom aligners is made of smooth, medical-grade, BPA-free plastic that fits snugly over your teeth, gently and continuously shifting them into their ideal positions.'
     ],
     faqs: [
       {
-        q: 'What is the difference between a crown and a bridge?',
-        a: 'A crown is a custom cap that covers a single damaged tooth. A bridge is a restoration used to fill a gap created by one or more missing teeth, anchored to teeth on either side.'
+        q: 'How long do I need to wear aligners each day?',
+        a: 'For optimal results, aligners should be worn for 20 to 22 hours per day, removing them only to eat, drink hot liquids, brush, and floss.'
       },
       {
-        q: 'How long do dental crowns last?',
-        a: 'A premium zirconia or ceramic crown typically lasts between 10 to 15 years, and frequently longer when maintained with regular checkups and good hygiene.'
+        q: 'Are clear aligners comfortable?',
+        a: 'Yes, clear aligners are designed for comfort. While you may feel a slight pressure for the first day or two of a new set of trays (which shows they are working), they are made of smooth plastic that won\'t irritate your gums.'
+      },
+      {
+        q: 'What are the benefits of Clear Aligners?',
+        a: 'Clear aligners are nearly invisible, comfortable to fit, completely removable for meals and cleaning, and utilize digital treatment planning so you can preview your results beforehand.'
       }
     ]
   },

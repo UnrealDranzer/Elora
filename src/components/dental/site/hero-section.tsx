@@ -3,30 +3,35 @@ import { MagneticAnchor } from '@/components/dental/magnetic-anchor';
 import { siteConfig } from '@/lib/site-config';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
 import { ArrowRight, Star } from 'lucide-react';
 
 const stats = [
   { value: '4.9', label: 'Google rating' },
-  { value: '18+', label: 'Years craft' },
-  { value: '9k+', label: 'Smiles composed' }
+  { value: '10+', label: 'Years Craft' },
+  { value: '5k+', label: 'Happy Smiles' }
 ];
 
-export const HeroSection = () => (
-  <section className="relative min-h-[100svh] overflow-hidden pt-28 pb-16 dot-grid lg:pt-32">
-    <div className="section-shell grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:pb-32 lg:pt-16">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className="z-10 space-y-10"
-      >
-        <span className="inline-flex items-center gap-2 rounded-full border border-charcoal/10 bg-white/70 px-5 py-2.5 text-[0.65rem] uppercase tracking-[0.35em] text-muted-foreground backdrop-blur-md shadow-sm">
-          <span aria-hidden>✨</span> Premium Dental Studio
-        </span>
+export const HeroSection = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-        <h1 className="editorial-heading max-w-2xl leading-[1.05]">
-          Where smiles meet <em className="font-light italic text-charcoal/90">artistry.</em>
-        </h1>
+  return (
+    <section className="relative min-h-[100svh] overflow-hidden pt-28 pb-16 dot-grid lg:pt-32">
+      <div className="section-shell grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:pb-32 lg:pt-16">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="z-10 space-y-10"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-charcoal/10 bg-white/70 px-5 py-2.5 text-[0.65rem] uppercase tracking-[0.35em] text-muted-foreground backdrop-blur-md shadow-sm">
+            <span aria-hidden>✨</span> Premium Dental Studio
+          </span>
+
+          <h1 className="editorial-heading max-w-2xl leading-[1.05]">
+            Where smiles meet <em className="font-light italic text-charcoal/90">artistry</em>
+          </h1>
 
         <p className="max-w-lg text-lg leading-[1.8] text-muted-foreground sm:text-[1.15rem]">
           A serene, spa-like dental studio where master clinicians sculpt painless, lifelong smiles using
@@ -80,7 +85,11 @@ export const HeroSection = () => (
           <div className="absolute inset-6 rounded-full border border-dashed border-sage/30 animate-spin-slow opacity-60" style={{ animationDirection: 'reverse' }}></div>
           <Image
             alt="3D crystalline tooth"
-            className="tooth-img absolute inset-0 w-full h-full object-contain animate-float z-20"
+            onLoad={() => setImageLoaded(true)}
+            className={cn(
+              "tooth-img absolute inset-0 w-full h-full object-contain animate-float z-20 transition-opacity duration-500 ease-out",
+              imageLoaded ? "opacity-100" : "opacity-0"
+            )}
             priority
             fill
             sizes="(max-width: 768px) 320px, (max-width: 1024px) 440px, 560px"
@@ -110,4 +119,5 @@ export const HeroSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
