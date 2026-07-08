@@ -58,7 +58,7 @@ export const Navbar = () => {
     >
       <div className="section-shell relative">
         {/* TOP ROW: Toggle, Logo, CTA */}
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center py-4 lg:py-6">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center pt-6 pb-4 lg:pt-8 lg:pb-6">
           
           {/* Left: Mobile Toggle */}
           <div className="flex items-center justify-start">
@@ -74,12 +74,12 @@ export const Navbar = () => {
 
           {/* Center: Large Logo */}
           <div className="flex justify-center items-center">
-            <a href="/" className="relative flex items-center shrink-0 w-[160px] h-[48px] sm:w-[180px] sm:h-[54px] lg:w-[220px] lg:h-[66px]">
+            <a href="/" className="relative flex items-center shrink-0 w-[170px] h-[52px] sm:w-[190px] sm:h-[58px] lg:w-[260px] lg:h-[80px]">
               <Image
                 src={logoImg}
                 alt="Dantved Clinic Logo"
                 fill
-                sizes="(max-width: 640px) 160px, (max-width: 1024px) 180px, 220px"
+                sizes="(max-width: 640px) 170px, (max-width: 1024px) 190px, 260px"
                 className="object-contain object-center"
                 priority
               />
@@ -101,7 +101,7 @@ export const Navbar = () => {
         </div>
 
         {/* BOTTOM ROW: Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center justify-center gap-10 pb-4" aria-label="Main Navigation">
+        <nav className="hidden lg:flex items-center justify-center gap-10 pb-6 lg:pb-8" aria-label="Main Navigation">
           <div 
             className="nav-link cursor-pointer flex items-center gap-1 group py-2"
             onMouseEnter={() => setMegaMenuOpen(true)}
