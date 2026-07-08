@@ -85,7 +85,7 @@ export default function RootLayout({
       <body>
         <AnalyticsReadiness />
         <div 
-          className="fixed pointer-events-none select-none z-0 opacity-[0.015] top-1/2 right-[-8%] -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] mix-blend-multiply"
+          className="fixed pointer-events-none select-none z-0 opacity-[0.025] top-1/2 right-[-8%] -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] mix-blend-soft-light blur-[0.5px]"
           style={{
             backgroundImage: 'url(/favicon.png)',
             backgroundSize: 'contain',

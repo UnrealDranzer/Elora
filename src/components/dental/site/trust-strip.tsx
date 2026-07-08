@@ -1,7 +1,7 @@
 const items = [
   'Pain-Free Dentistry',
   'Award-Winning Clinicians',
-  'Spa-like Comfort',
+  'Studio-Grade Precision',
   'Lifetime Aftercare',
   'AI Assisted Diagnostics'
 ];

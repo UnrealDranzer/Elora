@@ -56,7 +56,7 @@ export const Navbar = () => {
 
         {/* Center: Logo */}
         <div className="flex justify-center">
-          <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 overflow-hidden relative w-32 sm:w-36 lg:w-40 aspect-[200/54]">
+          <a href="#" className="flex items-center shrink-0 h-10 sm:h-12 lg:h-14 relative w-32 sm:w-36 lg:w-40">
             <Image
               src={logoImg}
               alt="Dantved Clinic Logo"
@@ -64,7 +64,7 @@ export const Navbar = () => {
               sizes="(max-width: 640px) 120px, (max-width: 1024px) 150px, 180px"
               onLoad={() => setLogoLoaded(true)}
               className={cn(
-                "object-contain object-top transition-opacity duration-500 ease-out",
+                "object-contain object-center transition-opacity duration-500 ease-out",
                 logoLoaded ? "opacity-100" : "opacity-0"
               )}
               priority

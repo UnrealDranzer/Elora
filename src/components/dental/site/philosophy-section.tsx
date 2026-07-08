@@ -37,7 +37,7 @@ export const PhilosophySection = () => {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="lg:pt-8"
         >
-          <SectionLabel index="03" title="Meet Our Specialist" />
+          <SectionLabel index="05" title="Meet Our Specialist" />
           
           <p className="mt-8 text-lg leading-[1.8] text-muted-foreground sm:text-xl">
             At Dantved, dentistry is not rushed. It is <em className="font-light italic text-charcoal/90">thoughtful, precise</em> and <em className="font-light italic text-charcoal/90">deeply patient-centric</em>. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.

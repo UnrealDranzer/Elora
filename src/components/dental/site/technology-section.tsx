@@ -3,7 +3,7 @@ import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
 
 const tech = [
-  { num: '01', title: '3D intraoral scanning', desc: 'Sub-millimetre digital impressions without messy moulds.' },
+  { num: '01', title: '3D intraoral scanning', desc: 'Accurate digital impressions without messy moulds.' },
   { num: '02', title: 'AI-assisted diagnostics', desc: 'Early detection mapping for caries, gum health, and bone density.' },
   { num: '03', title: 'Digital smile design', desc: 'Preview your future smile in real time before treatment begins.' },
   { num: '04', title: 'Laser dentistry', desc: 'Gentle tissue sculpting with faster healing and minimal discomfort.' }
@@ -13,7 +13,7 @@ export const TechnologySection = () => (
   <section id="technology" className="border-y border-charcoal/5 bg-[#f3efe8] py-24 sm:py-32">
     <div className="section-shell">
       <div className="mb-14 max-w-2xl">
-        <SectionLabel index="05" title="Technology" />
+        <SectionLabel index="04" title="Technology" />
         <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight">
           Precision instruments, <em className="italic">invisible complexity.</em>
         </h2>

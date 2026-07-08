@@ -12,7 +12,7 @@ export const BeforeAfterSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <SectionLabel index="04" title="Transformations" />
+        <SectionLabel index="03" title="Transformations" />
         <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight">
           Subtle refinements, <em className="italic">visibly natural.</em>
         </h2>

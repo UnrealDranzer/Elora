@@ -2,6 +2,7 @@
 import { LuxuryCursor } from '@/components/dental/luxury-cursor';
 import { BeforeAfterSection } from '@/components/dental/site/before-after-section';
 import { BookingSection } from '@/components/dental/site/booking-section';
+import { ClinicGallerySection } from '@/components/dental/site/clinic-gallery-section';
 import { FaqSection } from '@/components/dental/site/faq-section';
 import { FloatingWhatsApp } from '@/components/dental/site/floating-whatsapp';
 import { Footer } from '@/components/dental/site/footer';
@@ -11,6 +12,7 @@ import { Navbar } from '@/components/dental/site/navbar';
 import { PhilosophySection } from '@/components/dental/site/philosophy-section';
 import { ScrollProgress } from '@/components/dental/site/scroll-progress';
 import { ServicesSection } from '@/components/dental/site/services-section';
+import { ShowcaseSection } from '@/components/dental/site/showcase-section';
 import { TechnologySection } from '@/components/dental/site/technology-section';
 import { TestimonialsSection } from '@/components/dental/site/testimonials-section';
 import { TrustStrip } from '@/components/dental/site/trust-strip';
@@ -38,10 +40,12 @@ export const LuxuryDentalSite = () => {
       <main>
         <HeroSection />
         <TrustStrip />
+        <ShowcaseSection />
+        <ClinicGallerySection />
         <ServicesSection />
         <BeforeAfterSection />
-        <PhilosophySection />
         <TechnologySection />
+        <PhilosophySection />
         <TestimonialsSection />
         <FaqSection />
         <BookingSection />
@@ -51,4 +55,3 @@ export const LuxuryDentalSite = () => {
     </div>
   );
 };
-
