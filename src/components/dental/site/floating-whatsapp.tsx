@@ -8,9 +8,11 @@ export const FloatingWhatsApp = () => (
     target="_blank"
     rel="noreferrer"
     aria-label="Chat on WhatsApp"
-    className="fixed bottom-6 right-5 z-[80] flex h-14 w-14 items-center justify-center rounded-full bg-charcoal text-ivory shadow-float transition hover:scale-105 hover:bg-charcoal/90 sm:bottom-8 sm:right-8"
+    className="fixed bottom-6 right-5 z-[80] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-float transition hover:scale-105 hover:bg-[#20b858] sm:bottom-8 sm:right-8"
   >
-    <MessageCircle className="h-6 w-6" />
+    <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor">
+      <path d="M12.031 0C5.385 0 0 5.385 0 12.032c0 2.65.845 5.111 2.308 7.151L.38 24l5.056-1.87A11.964 11.964 0 0012.031 24c6.645 0 12.03-5.385 12.03-12.032S18.677 0 12.031 0zm0 22.016a9.923 9.923 0 01-5.074-1.39l-.364-.216-3.766 1.39 1.002-3.67-.236-.376A9.914 9.914 0 012.046 12.03C2.046 6.52 6.52 2.046 12.03 2.046s9.985 4.475 9.985 9.985-4.475 9.984-9.984 9.984zm5.485-7.502c-.3-.15-1.782-.88-2.057-.98-.276-.101-.476-.151-.677.15-.201.3-.777.98-.952 1.18-.176.2-.352.225-.653.076-1.545-.769-2.584-1.428-3.567-3.136-.2-.352.202-.327.498-.921.1-.15.05-.276 0-.426-.05-.15-.677-1.63-.927-2.23-.243-.586-.489-.506-.677-.516h-.577c-.201 0-.527.075-.802.376-.276.3-1.054 1.03-1.054 2.51 0 1.48 1.08 2.91 1.23 3.11.15.2 2.122 3.238 5.14 4.54 2.185.941 2.932.88 3.434.78.58-.114 1.782-.728 2.033-1.431.251-.703.251-1.306.176-1.432-.076-.125-.276-.2-.577-.35z" />
+    </svg>
   </a>
 );
 

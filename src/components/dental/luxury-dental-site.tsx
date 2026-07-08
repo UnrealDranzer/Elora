@@ -12,7 +12,7 @@ import { Navbar } from '@/components/dental/site/navbar';
 import { PhilosophySection } from '@/components/dental/site/philosophy-section';
 import { ScrollProgress } from '@/components/dental/site/scroll-progress';
 import { ServicesSection } from '@/components/dental/site/services-section';
-import { ShowcaseSection } from '@/components/dental/site/showcase-section';
+
 import { TechnologySection } from '@/components/dental/site/technology-section';
 import { TestimonialsSection } from '@/components/dental/site/testimonials-section';
 import { TrustStrip } from '@/components/dental/site/trust-strip';
@@ -40,7 +40,6 @@ export const LuxuryDentalSite = () => {
       <main>
         <HeroSection />
         <TrustStrip />
-        <ShowcaseSection />
         <ClinicGallerySection />
         <ServicesSection />
         <BeforeAfterSection />
