@@ -14,7 +14,7 @@ export const BeforeAfterSection = () => (
       >
         <SectionLabel index="03" title="Transformations" />
         <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight">
-          Subtle refinements, <em className="italic">visibly natural.</em>
+          Subtle refinements, <em className="italic">visibly natural</em>
         </h2>
         <p className="mt-5 max-w-md text-muted-foreground">
           Drag to explore tone, alignment, and proportion — composed to look effortlessly like you, only more luminous.
@@ -24,4 +24,3 @@ export const BeforeAfterSection = () => (
     </div>
   </section>
 );
-

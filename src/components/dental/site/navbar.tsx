@@ -134,9 +134,9 @@ export const Navbar = () => {
             >
               <div className="grid grid-cols-12 gap-10">
                 {/* Left: Category Columns */}
-                <div className="col-span-8 columns-3 gap-8">
+                <div className="col-span-8 grid grid-cols-3 gap-8 items-start">
                   {categories.map(category => (
-                    <div key={category} className="break-inside-avoid mb-8">
+                    <div key={category} className="mb-8">
                       <h3 className="text-sage text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-4 flex items-center justify-between border-b border-charcoal/5 pb-2">
                         {category}
                         <span className="text-muted-foreground/60 tracking-normal lowercase">{groupedServices[category].length} treatments</span>

@@ -69,7 +69,7 @@ export const FaqSection = ({ faqs }: FaqSectionProps) => {
         >
           <SectionLabel index="07" title="FAQ" />
           <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.25rem)] leading-tight">
-            Questions, answered with clarity.
+            Questions, answered with clarity
           </h2>
         </motion.div>
         <Accordion type="single" collapsible className="w-full">
