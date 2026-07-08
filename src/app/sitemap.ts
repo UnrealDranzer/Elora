@@ -1,11 +1,11 @@
 import { MetadataRoute } from 'next';
-import { servicesData } from '@/lib/services-data';
+import { services } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://dantvedclinic.com';
 
-  const serviceUrls = Object.keys(servicesData).map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
+  const serviceUrls = services.map((service) => ({
+    url: `${baseUrl}/services/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
