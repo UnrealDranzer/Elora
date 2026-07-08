@@ -130,48 +130,50 @@ export const Navbar = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.98 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute left-0 right-0 top-full mt-2 w-full bg-white rounded-[24px] shadow-2xl border border-charcoal/5 p-8 overflow-hidden hidden lg:block"
+              className="absolute left-0 right-0 top-full mt-2 w-full bg-white rounded-[24px] shadow-2xl border border-charcoal/5 p-6 lg:p-8 hidden lg:block overflow-hidden"
             >
-              <div className="grid grid-cols-12 gap-10">
-                {/* Left: Category Columns */}
-                <div className="col-span-8 grid grid-cols-3 gap-8 items-start">
-                  {categories.map(category => (
-                    <div key={category} className="mb-8">
-                      <h3 className="text-sage text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-4 flex items-center justify-between border-b border-charcoal/5 pb-2">
-                        {category}
-                        <span className="text-muted-foreground/60 tracking-normal lowercase">{groupedServices[category].length} treatments</span>
-                      </h3>
-                      <ul className="space-y-4">
-                        {groupedServices[category].map(service => (
-                          <li 
-                            key={service.slug} 
-                            onMouseEnter={() => setHoveredService(service)}
-                            className="group cursor-pointer"
-                          >
-                            <a href={`/services/${service.slug}`} className="block">
-                              <div className="flex items-center gap-2">
-                                <span className="text-sm font-medium text-charcoal group-hover:text-sage transition-colors">
-                                  {service.title}
-                                </span>
-                                {service.isPopular && (
-                                  <span className="text-[9px] bg-sage/10 text-sage px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">
-                                    Popular
+              <div className="grid grid-cols-12 gap-8 xl:gap-10">
+                {/* Left: Category Columns (Scrollable) */}
+                <div className="col-span-8 overflow-y-auto custom-scrollbar pr-4 max-h-[calc(100vh-10rem)]">
+                  <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8 items-start">
+                    {categories.map(category => (
+                      <div key={category} className="mb-6 xl:mb-8">
+                        <h3 className="text-sage text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-4 flex items-center justify-between border-b border-charcoal/5 pb-2 sticky top-0 bg-white/95 backdrop-blur z-10 pt-1">
+                          {category}
+                          <span className="text-muted-foreground/60 tracking-normal lowercase">{groupedServices[category].length} treatments</span>
+                        </h3>
+                        <ul className="space-y-3 xl:space-y-4">
+                          {groupedServices[category].map(service => (
+                            <li 
+                              key={service.slug} 
+                              onMouseEnter={() => setHoveredService(service)}
+                              className="group cursor-pointer"
+                            >
+                              <a href={`/services/${service.slug}`} className="block">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-sm font-medium text-charcoal group-hover:text-sage transition-colors">
+                                    {service.title}
                                   </span>
-                                )}
-                              </div>
-                              <p className="text-xs text-muted-foreground mt-1 group-hover:translate-x-1 transition-transform duration-300">
-                                {service.navDescription}
-                              </p>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                                  {service.isPopular && (
+                                    <span className="text-[9px] bg-sage/10 text-sage px-2 py-0.5 rounded-full font-semibold uppercase tracking-wider">
+                                      Popular
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="text-xs text-muted-foreground mt-1 group-hover:translate-x-1 transition-transform duration-300">
+                                  {service.navDescription}
+                                </p>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* Right: Featured / Preview Card */}
-                <div className="col-span-4 border-l border-charcoal/5 pl-10">
+                {/* Right: Featured / Preview Card (Sticky) */}
+                <div className="col-span-4 border-l border-charcoal/5 pl-8 xl:pl-10 h-full max-h-[calc(100vh-10rem)] sticky top-0">
                   <AnimatePresence mode="wait">
                     {hoveredService ? (
                       <motion.div
