@@ -30,12 +30,12 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     description: service.seo.description,
     keywords: service.seo.keywords,
     alternates: {
-      canonical: `https://dantvedclinic.com/services/${slug}`,
+      canonical: `https://www.dantvedclinic.org/services/${slug}`,
     },
     openGraph: {
       title: service.seo.title,
       description: service.seo.description,
-      url: `https://dantvedclinic.com/services/${slug}`,
+      url: `https://www.dantvedclinic.org/services/${slug}`,
       siteName: 'Dantved Clinic',
       images: [
         {
@@ -79,13 +79,13 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     "@type": "WebPage",
     "name": service.seo.title,
     "description": service.seo.description,
-    "url": `https://dantvedclinic.com/services/${slug}`,
+    "url": `https://www.dantvedclinic.org/services/${slug}`,
     "publisher": {
       "@type": "Organization",
       "name": "Dantved Clinic",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dantvedclinic.com/logo-dantved.png"
+        "url": "https://www.dantvedclinic.org/logo-dantved.png"
       }
     }
   };
@@ -113,19 +113,19 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dantvedclinic.com"
+        "item": "https://www.dantvedclinic.org"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://dantvedclinic.com/services"
+        "item": "https://www.dantvedclinic.org/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": service.title,
-        "item": `https://dantvedclinic.com/services/${slug}`
+        "item": `https://www.dantvedclinic.org/services/${slug}`
       }
     ]
   };
@@ -135,8 +135,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Dantved Clinic",
-    "image": "https://dantvedclinic.com/logo-dantved.png",
-    "url": "https://dantvedclinic.com",
+    "image": "https://www.dantvedclinic.org/logo-dantved.png",
+    "url": "https://www.dantvedclinic.org",
     "telephone": "+918143789587",
     "medicalSpecialty": "Dentistry",
     "availableService": {

@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: 'Contact Dantved Clinic in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
   keywords: 'Book Dental Appointment Airoli, Contact Dentist Navi Mumbai, Dantved Clinic Address, Dental Emergency Airoli',
   alternates: {
-    canonical: 'https://dantvedclinic.com/contact',
+    canonical: 'https://www.dantvedclinic.org/contact',
   },
   openGraph: {
     title: 'Contact Dantved Clinic | Book Appointment in Airoli',
     description: 'Contact Dantved Clinic in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
-    url: 'https://dantvedclinic.com/contact',
+    url: 'https://www.dantvedclinic.org/contact',
     siteName: 'Dantved Clinic',
     images: [
       {

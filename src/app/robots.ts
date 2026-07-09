@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://dantvedclinic.com/sitemap.xml',
+    sitemap: 'https://www.dantvedclinic.org/sitemap.xml',
   };
 }

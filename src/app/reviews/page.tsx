@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: 'Read reviews and testimonials from our patients. See why Dantved Clinic is the most trusted choice for dental implants and aesthetic dentistry.',
   keywords: 'Dantved Clinic Reviews, Dentist Ratings Airoli, Patient Testimonials Navi Mumbai, Google Reviews Dantved',
   alternates: {
-    canonical: 'https://dantvedclinic.com/reviews',
+    canonical: 'https://www.dantvedclinic.org/reviews',
   },
   openGraph: {
     title: 'Patient Reviews | Dantved Clinic Airoli, Navi Mumbai',
     description: 'Read reviews and testimonials from our patients. See why Dantved Clinic is the most trusted choice for dental implants and aesthetic dentistry.',
-    url: 'https://dantvedclinic.com/reviews',
+    url: 'https://www.dantvedclinic.org/reviews',
     siteName: 'Dantved Clinic',
     images: [
       {

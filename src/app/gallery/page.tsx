@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at Dantved Clinic in Navi Mumbai.',
   keywords: 'Smile Gallery Airoli, Dental Before After Photos, Veneers Results Navi Mumbai, Implant Case Studies',
   alternates: {
-    canonical: 'https://dantvedclinic.com/gallery',
+    canonical: 'https://www.dantvedclinic.org/gallery',
   },
   openGraph: {
     title: 'Smile Gallery & Case Studies | Dantved Clinic Airoli',
     description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at Dantved Clinic in Navi Mumbai.',
-    url: 'https://dantvedclinic.com/gallery',
+    url: 'https://www.dantvedclinic.org/gallery',
     siteName: 'Dantved Clinic',
     images: [
       {

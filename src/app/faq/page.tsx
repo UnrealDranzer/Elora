@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description: 'Find answers to common questions about dental implants, veneers, painless dentistry, and more at Dantved Clinic in Navi Mumbai.',
   keywords: 'Dental FAQs Navi Mumbai, Root Canal Questions, Denture Cleaning, Dental Implant Cost FAQs',
   alternates: {
-    canonical: 'https://dantvedclinic.com/faq',
+    canonical: 'https://www.dantvedclinic.org/faq',
   },
   openGraph: {
     title: 'Dental FAQs | Dantved Clinic Airoli',
     description: 'Find answers to common questions about dental implants, veneers, painless dentistry, and more at Dantved Clinic in Navi Mumbai.',
-    url: 'https://dantvedclinic.com/faq',
+    url: 'https://www.dantvedclinic.org/faq',
     siteName: 'Dantved Clinic',
     images: [
       {

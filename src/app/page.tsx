@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
   keywords: 'Dental Clinic Navi Mumbai, Dentist Airoli, Dental Implants Navi Mumbai, Smile Designing, Cosmetic Dentistry, Dental Veneers, Clear Aligners, Dentures, Root Canal, Teeth Whitening, Painless Dentist, Full Mouth Rehabilitation, Best Prosthodontist, Dr Siddharth Vaish, Dental Implant Specialist, Smile Makeover, Emergency Dentist, Family Dentist, Dental Care Airoli, Dentist Near Me',
   alternates: {
-    canonical: 'https://dantvedclinic.com',
+    canonical: 'https://www.dantvedclinic.org',
   },
   openGraph: {
     title: 'Dantved Clinic | Best Dental Clinic in Airoli, Navi Mumbai',
     description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
-    url: 'https://dantvedclinic.com',
+    url: 'https://www.dantvedclinic.org',
     siteName: 'Dantved Clinic',
     images: [
       {
@@ -42,8 +42,8 @@ export default function Home() {
     "@type": ["Dentist", "MedicalBusiness", "LocalBusiness", "Organization"],
     "name": "Dantved Clinic",
     "image": "https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png",
-    "@id": "https://dantvedclinic.com",
-    "url": "https://dantvedclinic.com",
+    "@id": "https://www.dantvedclinic.org",
+    "url": "https://www.dantvedclinic.org",
     "telephone": "+918143789587",
     "priceRange": "$$",
     "address": {

@@ -18,7 +18,7 @@ export const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": item.href ? `https://dantvedclinic.com${item.href}` : `https://dantvedclinic.com`
+      "item": item.href ? `https://www.dantvedclinic.org${item.href}` : `https://www.dantvedclinic.org`
     }))
   };
 

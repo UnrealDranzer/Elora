@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { services } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://dantvedclinic.com';
+  const baseUrl = 'https://www.dantvedclinic.org';
 
   const serviceUrls = services.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,

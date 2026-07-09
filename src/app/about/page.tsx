@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   description: 'Learn about Dantved Clinic, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
   keywords: 'About Dantved Clinic, Dr Siddharth Vaish, Dentist Airoli, Navi Mumbai Dental Studio, Prosthodontist Doctor',
   alternates: {
-    canonical: 'https://dantvedclinic.com/about',
+    canonical: 'https://www.dantvedclinic.org/about',
   },
   openGraph: {
     title: 'About Dantved Clinic | Best Dental Clinic in Airoli',
     description: 'Learn about Dantved Clinic, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
-    url: 'https://dantvedclinic.com/about',
+    url: 'https://www.dantvedclinic.org/about',
     siteName: 'Dantved Clinic',
     images: [
       {

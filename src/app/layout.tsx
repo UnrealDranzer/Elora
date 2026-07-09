@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dantvedclinic.com'),
+  metadataBase: new URL('https://www.dantvedclinic.org'),
   title: 'Dantved Clinic | Best Dental Clinic in Airoli, Navi Mumbai',
   description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
   keywords: 'Dental Clinic Navi Mumbai, Dentist Airoli, Dental Implants Navi Mumbai, Smile Designing, Cosmetic Dentistry, Dental Veneers, Clear Aligners, Dentures, Root Canal, Teeth Whitening, Painless Dentist, Full Mouth Rehabilitation, Best Prosthodontist, Dr Siddharth Vaish, Dental Implant Specialist, Smile Makeover, Emergency Dentist, Family Dentist, Dental Care Airoli, Dentist Near Me',
@@ -32,12 +32,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: 'https://dantvedclinic.com',
+    canonical: 'https://www.dantvedclinic.org',
   },
   openGraph: {
     title: 'Dantved Clinic | Best Dental Clinic in Airoli, Navi Mumbai',
     description: 'Dantved Clinic provides dental implants, smile designing, clear aligners, veneers, dentures, full mouth rehabilitation, cosmetic dentistry and painless dental treatments in Airoli, Navi Mumbai.',
-    url: 'https://dantvedclinic.com',
+    url: 'https://www.dantvedclinic.org',
     siteName: 'Dantved Clinic',
     images: [
       {
