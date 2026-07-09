@@ -74,7 +74,7 @@ export const PhilosophySection = () => {
               </div>
               <div>
                 <p className="font-medium text-charcoal text-sm">M.D.S. Prosthodontics</p>
-                <p className="mt-1 text-xs text-muted-foreground">Bareilly International University</p>
+                <p className="mt-1 text-xs text-muted-foreground">Bareilly International University, Bareilly</p>
               </div>
             </div>
 

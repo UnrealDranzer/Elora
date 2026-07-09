@@ -50,7 +50,7 @@ const services: Service[] = [
   },
   {
     title: 'Clear Aligners',
-    description: 'Invisible custom aligners designed for everyday life.',
+    description: 'Invisible Custom Aligners. Designed for Everyday life',
     image: '/treatments/clear-aligners.png',
     slug: 'clear-aligners',
     dark: true,
@@ -90,7 +90,7 @@ export const ServicesSection = () => (
         <div>
           <SectionLabel index="02" title="Treatments" />
           <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.75rem)] leading-[1.05] text-charcoal">
-            A full studio of care,{' '}
+            A Clinic full of care,{' '}
             <em className="font-normal italic text-charcoal/80">without the clinical fear</em>
           </h2>
         </div>

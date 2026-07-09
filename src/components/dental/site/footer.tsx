@@ -8,12 +8,12 @@ export const Footer = () => (
     <div className="section-shell grid gap-12 pb-14 lg:grid-cols-4">
       <div className="lg:col-span-1">
         {/* Logo blended into dark background — mix-blend-lighten preserves gold */}
-        <div className="inline-flex h-14 sm:h-16 lg:h-20 items-center relative w-36 sm:w-40 lg:w-48">
+        <div className="inline-flex h-20 sm:h-24 lg:h-28 items-center relative w-48 sm:w-56 lg:w-64">
           <Image
             src={logoImg}
             alt="Dantved Clinic Logo"
             fill
-            sizes="(max-width: 640px) 140px, (max-width: 1024px) 160px, 200px"
+            sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
             className="object-contain object-center mix-blend-lighten brightness-[1.2]"
           />
         </div>
@@ -72,7 +72,7 @@ export const Footer = () => (
         </ul>
         <p className="mt-5 flex items-center gap-2 text-xs text-ivory/55">
           <Clock className="h-3.5 w-3.5 text-sage" aria-hidden="true" />
-          Concierge replies within 1 hour
+          Our team replies within 1 hour
         </p>
       </div>
 

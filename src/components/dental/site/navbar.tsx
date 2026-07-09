@@ -120,15 +120,15 @@ export const Navbar = () => {
               className={cn(
                 "relative flex items-center shrink-0 transition-all duration-400",
                 isCompactMode 
-                  ? "w-[150px] h-[46px] sm:w-[160px] sm:h-[48px] lg:w-[190px] lg:h-[58px]" 
-                  : "w-[170px] h-[52px] sm:w-[190px] sm:h-[58px] lg:w-[260px] lg:h-[80px]"
+                  ? "w-[180px] h-[56px] sm:w-[200px] sm:h-[60px] lg:w-[240px] lg:h-[72px]" 
+                  : "w-[200px] h-[64px] sm:w-[240px] sm:h-[72px] lg:w-[320px] lg:h-[100px]"
               )}
             >
               <Image
                 src={logoImg}
                 alt="Dantved Clinic Logo"
                 fill
-                sizes="(max-width: 640px) 170px, (max-width: 1024px) 190px, 260px"
+                sizes="(max-width: 640px) 200px, (max-width: 1024px) 240px, 320px"
                 className="object-contain object-center"
                 priority
               />
@@ -143,7 +143,7 @@ export const Navbar = () => {
               rel="noreferrer"
               className={cn("pill-btn-dark hidden sm:flex transition-all duration-400", isCompactMode && "scale-90 origin-right")}
             >
-              Book Appointment
+              Book an appointment
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -391,7 +391,7 @@ export const Navbar = () => {
                   rel="noreferrer"
                   className="pill-btn-dark w-full justify-center"
                 >
-                  Book Appointment
+                  Book an appointment
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
@@ -474,7 +474,7 @@ export const Navbar = () => {
                 rel="noreferrer"
                 className="pill-btn-dark mt-6 w-full justify-center"
               >
-                Book Appointment
+                Book an appointment
                 <ArrowRight className="h-4 w-4" />
               </a>
             </nav>

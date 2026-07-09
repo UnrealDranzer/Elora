@@ -34,8 +34,7 @@ export const HeroSection = () => {
           </h1>
 
         <p className="max-w-lg text-lg leading-[1.8] text-muted-foreground sm:text-[1.15rem]">
-          A serene, spa-like dental studio where master clinicians sculpt painless, lifelong smiles using
-          next-generation 3D imaging and artisanal restorative craft.
+          Dentistry, practiced with intention. At Dantved, we believe exceptional care begins with listening. Through calm consultations, transparent communication, advanced diagnostics, and precise restorative dentistry, we create smiles that are as healthy as they are enduring.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">

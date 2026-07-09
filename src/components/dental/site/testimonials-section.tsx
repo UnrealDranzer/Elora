@@ -9,6 +9,7 @@ type Review = {
   initials: string;
   date: string;
   text: string;
+  link: string;
 };
 
 const reviews: Review[] = [
@@ -16,19 +17,22 @@ const reviews: Review[] = [
     name: 'Sai Sudha Goddeti',
     initials: 'SG',
     date: '3 months ago',
-    text: 'Extremely satisfied with the dental implant treatment by Dr. Siddharth. The entire process was painless, and the clinic is incredibly clean and modern. Dr. Siddharth explained everything patiently and made me feel very comfortable. Highly recommend Dantved Clinic!'
+    text: 'Extremely satisfied with the dental implant treatment by Dr. Siddharth. The entire process was painless, and the clinic is incredibly clean and modern. Dr. Siddharth explained everything patiently and made me feel very comfortable. Highly recommend Dantved Clinic!',
+    link: 'https://maps.app.goo.gl/t2HwpYobmqvmnp8h9'
   },
   {
     name: 'Nagarjuna Ravi',
     initials: 'NR',
     date: '5 months ago',
-    text: 'I visited Dantved Clinic for a smile makeover and veneers. The digital treatment planning was amazing—I could see the preview of my teeth before starting. The results are natural-looking and absolutely perfect. Exceptional care and premium environment.'
+    text: 'I visited Dantved Clinic for a smile makeover and veneers. The digital treatment planning was amazing—I could see the preview of my teeth before starting. The results are natural-looking and absolutely perfect. Exceptional care and premium environment.',
+    link: 'https://maps.app.goo.gl/UZy4tAYpXhhyG9Xe7'
   },
   {
     name: 'Rajni Gupta',
     initials: 'RG',
     date: '1 month ago',
-    text: 'Best dental clinic in Airoli. I was terrified of dental procedures, but their comforting ambiance, warm staff, and gentle, explanation-first approach completely put my anxiety at ease. The root canal treatment was smooth and painless.'
+    text: 'Best dental clinic in Airoli. I was terrified of dental procedures, but their comforting ambiance, warm staff, and gentle, explanation-first approach completely put my anxiety at ease. The root canal treatment was smooth and painless.',
+    link: 'https://maps.app.goo.gl/s37jUmAknzYxxfFj9'
   }
 ];
 
@@ -69,7 +73,7 @@ export const TestimonialsSection = () => (
       <div className="grid gap-6 lg:gap-8 lg:grid-cols-3">
         {reviews.map((review, i) => (
           <motion.a
-            href={siteConfig.mapsUrl}
+            href={review.link}
             target="_blank"
             rel="noopener noreferrer"
             key={`review-${i}`}
