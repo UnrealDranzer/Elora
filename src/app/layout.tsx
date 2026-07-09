@@ -80,6 +80,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
         <meta name="theme-color" content="#F6F3EE" />
+        <meta name="google-site-verification" content="r7Q47VEO7UemtpS-NWwepngjeMIy1kp1MpMiz2nfb1o" />
       </head>
       <body>
         <AnalyticsReadiness />
