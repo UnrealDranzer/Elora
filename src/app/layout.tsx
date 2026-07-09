@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter, Cormorant_Garamond } from 'next/font/google';
 import '../index.css';
 import { SmoothScrolling } from '@/components/smooth-scrolling';
-import { AgentationProvider } from './agentation-provider';
 import { AnalyticsReadiness } from '@/components/dental/analytics-readiness';
 
 const inter = Inter({
@@ -96,7 +95,6 @@ export default function RootLayout({
         />
         <SmoothScrolling>
           {children}
-          <AgentationProvider />
         </SmoothScrolling>
       </body>
     </html>
