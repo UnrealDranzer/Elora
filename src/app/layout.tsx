@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from 'next/font/google';
 import '../index.css';
 import { SmoothScrolling } from '@/components/smooth-scrolling';
 import { AnalyticsReadiness } from '@/components/dental/analytics-readiness';
+import { Agentation } from 'agentation';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -97,6 +98,7 @@ export default function RootLayout({
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
+        {process.env.NODE_ENV === 'development' && <Agentation />}
       </body>
     </html>
   );
