@@ -17,14 +17,14 @@ const reviews: Review[] = [
     name: 'Sai Sudha Goddeti',
     initials: 'SG',
     date: '3 months ago',
-    text: 'Extremely satisfied with the dental implant treatment by Dr. Siddharth. The entire process was painless, and the clinic is incredibly clean and modern. Dr. Siddharth explained everything patiently and made me feel very comfortable. Highly recommend Dantved Clinic!',
+    text: 'Extremely satisfied with the dental implant treatment by Dr. Siddharth. The entire process was painless, and the clinic is incredibly clean and modern. Dr. Siddharth explained everything patiently and made me feel very comfortable. Highly recommend DANTVED CLINIC!',
     link: 'https://maps.app.goo.gl/t2HwpYobmqvmnp8h9'
   },
   {
     name: 'Nagarjuna Ravi',
     initials: 'NR',
     date: '5 months ago',
-    text: 'I visited Dantved Clinic for a smile makeover and veneers. The digital treatment planning was amazing—I could see the preview of my teeth before starting. The results are natural-looking and absolutely perfect. Exceptional care and premium environment.',
+    text: 'I visited DANTVED CLINIC for a smile makeover and veneers. The digital treatment planning was amazing—I could see the preview of my teeth before starting. The results are natural-looking and absolutely perfect. Exceptional care and premium environment.',
     link: 'https://maps.app.goo.gl/UZy4tAYpXhhyG9Xe7'
   },
   {

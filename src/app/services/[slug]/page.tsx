@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
       title: service.seo.title,
       description: service.seo.description,
       url: `https://www.dantvedclinic.org/services/${slug}`,
-      siteName: 'Dantved Clinic',
+      siteName: 'DANTVED CLINIC',
       images: [
         {
           url: service.image,
@@ -82,7 +82,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     "url": `https://www.dantvedclinic.org/services/${slug}`,
     "publisher": {
       "@type": "Organization",
-      "name": "Dantved Clinic",
+      "name": "DANTVED CLINIC",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.dantvedclinic.org/logo-dantved.png"
@@ -134,7 +134,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const dentistSchema = {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "Dantved Clinic",
+    "name": "DANTVED CLINIC",
     "image": "https://www.dantvedclinic.org/logo-dantved.png",
     "url": "https://www.dantvedclinic.org",
     "telephone": "+918143789587",

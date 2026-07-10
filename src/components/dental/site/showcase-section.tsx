@@ -146,7 +146,7 @@ export const ShowcaseSection = () => {
           className="text-center mb-16 sm:mb-24"
         >
           <p className="text-[0.65rem] uppercase tracking-[0.35em] text-sage/80 mb-5">
-            The Dantved Standard
+            The DANTVED Standard
           </p>
           <h2 className="font-display text-[clamp(2.4rem,5.5vw,4rem)] leading-[1.05] text-charcoal">
             Precision Meets <em className="font-light italic text-charcoal/85">Artistry</em>
@@ -203,7 +203,7 @@ export const ShowcaseSection = () => {
           
           <div className="mt-8 max-w-lg mx-auto space-y-4">
             <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-              At Dantved Clinic, we combine digital precision with artistic expertise to create smiles that look natural, function beautifully, and last for years.
+              At DANTVED CLINIC, we combine digital precision with artistic expertise to create smiles that look natural, function beautifully, and last for years.
             </p>
             <p className="text-xs sm:text-sm text-charcoal/50 italic">
               Where technology meets craftsmanship

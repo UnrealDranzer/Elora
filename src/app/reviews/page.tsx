@@ -3,17 +3,17 @@ import { TestimonialsSection } from '@/components/dental/site/testimonials-secti
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Patient Reviews | Dantved Clinic Airoli, Navi Mumbai',
-  description: 'Read reviews and testimonials from our patients. See why Dantved Clinic is the most trusted choice for dental implants and aesthetic dentistry.',
-  keywords: 'Dantved Clinic Reviews, Dentist Ratings Airoli, Patient Testimonials Navi Mumbai, Google Reviews Dantved',
+  title: 'Patient Reviews | DANTVED CLINIC Airoli, Navi Mumbai',
+  description: 'Read reviews and testimonials from our patients. See why DANTVED CLINIC is the most trusted choice for dental implants and aesthetic dentistry.',
+  keywords: 'DANTVED CLINIC Reviews, Dentist Ratings Airoli, Patient Testimonials Navi Mumbai, Google Reviews DANTVED',
   alternates: {
     canonical: 'https://www.dantvedclinic.org/reviews',
   },
   openGraph: {
-    title: 'Patient Reviews | Dantved Clinic Airoli, Navi Mumbai',
-    description: 'Read reviews and testimonials from our patients. See why Dantved Clinic is the most trusted choice for dental implants and aesthetic dentistry.',
+    title: 'Patient Reviews | DANTVED CLINIC Airoli, Navi Mumbai',
+    description: 'Read reviews and testimonials from our patients. See why DANTVED CLINIC is the most trusted choice for dental implants and aesthetic dentistry.',
     url: 'https://www.dantvedclinic.org/reviews',
-    siteName: 'Dantved Clinic',
+    siteName: 'DANTVED CLINIC',
     images: [
       {
         url: 'https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Patient Reviews | Dantved Clinic Airoli, Navi Mumbai',
-    description: 'Read reviews and testimonials from our patients. See why Dantved Clinic is the most trusted choice for dental implants and aesthetic dentistry.',
+    title: 'Patient Reviews | DANTVED CLINIC Airoli, Navi Mumbai',
+    description: 'Read reviews and testimonials from our patients. See why DANTVED CLINIC is the most trusted choice for dental implants and aesthetic dentistry.',
     images: ['https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png'],
   },
   robots: {

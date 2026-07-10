@@ -10,7 +10,7 @@ import { ArrowRight } from 'lucide-react';
 const galleryImages: GalleryImage[] = [
   {
     src: '/clinic/exterior.jpg',
-    alt: 'Dantved Clinic exterior — modern storefront with greenery',
+    alt: 'DANTVED CLINIC exterior — modern storefront with greenery',
   },
   {
     src: '/clinic/treatment-room.jpg',
@@ -26,7 +26,7 @@ const galleryImages: GalleryImage[] = [
   },
   {
     src: '/clinic/interior-wide.jpg',
-    alt: 'Dantved Clinic interior — lounge and treatment area with signature ceiling lamp',
+    alt: 'DANTVED CLINIC interior — lounge and treatment area with signature ceiling lamp',
   },
 ];
 
@@ -52,7 +52,7 @@ export const ClinicGallerySection = () => {
                 Our Space
               </p>
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] text-charcoal">
-                Inside <em className="font-light italic text-charcoal/85">Dantved Clinic</em>
+                Inside <em className="font-light italic text-charcoal/85">DANTVED CLINIC</em>
               </h2>
               <p className="mt-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
                 Every detail of our clinic has been thoughtfully designed to create a calm, private, and comfortable experience for every patient. 

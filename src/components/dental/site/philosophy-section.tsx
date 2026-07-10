@@ -17,7 +17,7 @@ export const PhilosophySection = () => {
           <motion.div style={{ y: y1 }} className="relative z-10 overflow-hidden rounded-[2.5rem] shadow-float aspect-[4/5] w-full">
             <Image
               src={drSiddharthImg}
-              alt="Dr. Siddharth Vaish — Prosthodontist & Implantologist at Dantved Clinic"
+              alt="Dr. Siddharth Vaish — Prosthodontist & Implantologist at DANTVED CLINIC"
               className="object-cover transition-transform duration-[3s] hover:scale-105"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -40,7 +40,7 @@ export const PhilosophySection = () => {
           <SectionLabel index="05" title="Meet Our Specialist" />
           
           <p className="mt-8 text-lg leading-[1.8] text-muted-foreground sm:text-xl">
-            At Dantved, dentistry is not rushed. It is thoughtful, precise and deeply patient-centric. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.
+            At DANTVED, dentistry is not rushed. It is thoughtful, precise and deeply patient-centric. Built on years of learning, clinical experience and a belief that every smile deserves honesty and care.
           </p>
 
           <div className="mt-10">

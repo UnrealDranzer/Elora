@@ -35,8 +35,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Professional ultrasonic cleaning and polishing.',
     image: '/clinic/treatment-room.jpg',
     seo: {
-      title: 'Oral Prophylaxis & Teeth Cleaning in Airoli | Dantved Clinic',
-      description: 'Professional ultrasonic teeth cleaning and polishing to prevent cavities and gum disease. Book your routine oral prophylaxis at Dantved Clinic, Airoli.',
+      title: 'Oral Prophylaxis & Teeth Cleaning in Airoli | DANTVED CLINIC',
+      description: 'Professional ultrasonic teeth cleaning and polishing to prevent cavities and gum disease. Book your routine oral prophylaxis at DANTVED CLINIC, Airoli.',
       keywords: 'Oral Prophylaxis Airoli, Teeth Cleaning Navi Mumbai, Scaling and Polishing, Preventive Dentistry',
     },
     h1: 'Professional Oral Prophylaxis in Airoli',
@@ -64,8 +64,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Advanced periodontal care for healthy gums.',
     image: '/clinic/exterior.jpg',
     seo: {
-      title: 'Gum Therapy & Periodontal Care in Airoli | Dantved Clinic',
-      description: 'Expert periodontal treatments to cure bleeding gums and gingivitis. Restore your gum health at Dantved Clinic in Navi Mumbai.',
+      title: 'Gum Therapy & Periodontal Care in Airoli | DANTVED CLINIC',
+      description: 'Expert periodontal treatments to cure bleeding gums and gingivitis. Restore your gum health at DANTVED CLINIC in Navi Mumbai.',
       keywords: 'Gum Therapy Airoli, Periodontal Care Navi Mumbai, Bleeding Gums Treatment, Gingivitis Cure',
     },
     h1: 'Advanced Periodontal Care & Gum Therapy',
@@ -95,7 +95,7 @@ export const services: ServiceDetail[] = [
     navDescription: 'Tooth-colored composite restorations.',
     image: '/clinic/treatment-room.jpg',
     seo: {
-      title: 'Tooth-Colored Fillings in Airoli | Dantved Clinic',
+      title: 'Tooth-Colored Fillings in Airoli | DANTVED CLINIC',
       description: 'Restore decayed or chipped teeth invisibly with premium composite fillings. Safe, durable, and aesthetically perfect dental restorations in Navi Mumbai.',
       keywords: 'Tooth Colored Fillings Airoli, Composite Restorations Navi Mumbai, Cavity Treatment, Invisible Fillings',
     },
@@ -124,8 +124,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Painless single-visit endodontic therapy.',
     image: '/treatments/root-canal.png',
     seo: {
-      title: 'Painless Root Canal Treatment in Airoli | Dantved Clinic',
-      description: 'Eliminate tooth pain and save your natural tooth with painless, single-visit root canal therapy at Dantved Clinic, Airoli. Call for emergency dental relief.',
+      title: 'Painless Root Canal Treatment in Airoli | DANTVED CLINIC',
+      description: 'Eliminate tooth pain and save your natural tooth with painless, single-visit root canal therapy at DANTVED CLINIC, Airoli. Call for emergency dental relief.',
       keywords: 'Root Canal Airoli, Painless Root Canal Navi Mumbai, Single Visit RCT, Endodontist Dentist Airoli',
     },
     h1: 'Single-Visit Painless Root Canal Treatment',
@@ -153,7 +153,7 @@ export const services: ServiceDetail[] = [
     navDescription: 'Premium zirconia and ceramic protective caps.',
     image: '/clinic/interior-wide.jpg',
     seo: {
-      title: 'Zirconia & Ceramic Dental Crowns in Airoli | Dantved Clinic',
+      title: 'Zirconia & Ceramic Dental Crowns in Airoli | DANTVED CLINIC',
       description: 'Protect damaged teeth with high-strength, natural-looking Zirconia and E-max ceramic crowns. Precision fit and long-lasting durability in Navi Mumbai.',
       keywords: 'Dental Crowns Airoli, Zirconia Caps Navi Mumbai, Ceramic Tooth Cover, Teeth Cap',
     },
@@ -182,8 +182,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Fixed replacement for one or more missing teeth.',
     image: '/clinic/lounge.jpg',
     seo: {
-      title: 'Fixed Dental Bridges in Airoli | Dantved Clinic',
-      description: 'Replace missing teeth rapidly with custom fixed dental bridges. Highly aesthetic and durable ceramic restorations at Dantved Clinic, Navi Mumbai.',
+      title: 'Fixed Dental Bridges in Airoli | DANTVED CLINIC',
+      description: 'Replace missing teeth rapidly with custom fixed dental bridges. Highly aesthetic and durable ceramic restorations at DANTVED CLINIC, Navi Mumbai.',
       keywords: 'Dental Bridges Airoli, Fixed Teeth Replacement Navi Mumbai, Ceramic Bridge, Tooth Gap Closure',
     },
     h1: 'Custom Fixed Dental Bridges',
@@ -214,7 +214,7 @@ export const services: ServiceDetail[] = [
     image: '/treatments/oral-surgery.png',
     seo: {
       title: 'Wisdom Tooth Extraction & Oral Surgery in Airoli',
-      description: 'Expert surgical care at Dantved Clinic. Pain-free wisdom teeth extractions and minor oral surgeries in a sterile, premium clinic environment.',
+      description: 'Expert surgical care at DANTVED CLINIC. Pain-free wisdom teeth extractions and minor oral surgeries in a sterile, premium clinic environment.',
       keywords: 'Wisdom Tooth Extraction Airoli, Tooth Removal Navi Mumbai, Impacted Tooth Surgery, Painless Extraction',
     },
     h1: 'Expert Wisdom Tooth Extraction & Surgical Care',
@@ -244,7 +244,7 @@ export const services: ServiceDetail[] = [
     image: '/treatments/dental-implants.png',
     seo: {
       title: 'Dental Implants in Airoli, Navi Mumbai | Tooth Restoration Specialist',
-      description: 'Replace missing teeth permanently with premium dental implants at Dantved Clinic, Airoli. Pain-free treatment under Dr. Siddharth Vaish. Call today.',
+      description: 'Replace missing teeth permanently with premium dental implants at DANTVED CLINIC, Airoli. Pain-free treatment under Dr. Siddharth Vaish. Call today.',
       keywords: 'Dental Implants Airoli, Tooth Implant Navi Mumbai, Best Implantologist Airoli, Dr Siddharth Vaish, Permanent Teeth Replacement',
     },
     h1: 'Premium Dental Implants in Airoli',
@@ -278,8 +278,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Comfortable partial and complete dentures.',
     image: '/treatments/dentures.png',
     seo: {
-      title: 'Custom Partial & Complete Dentures in Airoli | Dantved Clinic',
-      description: 'Regain your chewing ability and confident smile with custom partial or complete dentures at Dantved Clinic. Lightweight and precision-fit for maximum comfort.',
+      title: 'Custom Partial & Complete Dentures in Airoli | DANTVED CLINIC',
+      description: 'Regain your chewing ability and confident smile with custom partial or complete dentures at DANTVED CLINIC. Lightweight and precision-fit for maximum comfort.',
       keywords: 'Custom Dentures Airoli, Complete Dentures Navi Mumbai, Partial Dentures, Removable Teeth Replacement',
     },
     h1: 'Comfortable Custom Removable Dentures',
@@ -307,7 +307,7 @@ export const services: ServiceDetail[] = [
     navDescription: 'Snap-on dentures for rock-solid stability.',
     image: '/treatments/dental-implants.png',
     seo: {
-      title: 'Implant Supported Overdentures in Airoli | Dantved Clinic',
+      title: 'Implant Supported Overdentures in Airoli | DANTVED CLINIC',
       description: 'Say goodbye to loose, slipping dentures. Implant-supported snap-on overdentures offer incredible stability and chewing power. Consult Dr. Siddharth Vaish.',
       keywords: 'Implant Overdentures Airoli, Snap On Dentures Navi Mumbai, Implant Supported Dentures, Denture Stabilization',
     },
@@ -337,7 +337,7 @@ export const services: ServiceDetail[] = [
     image: '/treatments/full-mouth-rehabilitation.png',
     dark: true,
     seo: {
-      title: 'Full Mouth Rehabilitation in Airoli | Dantved Clinic',
+      title: 'Full Mouth Rehabilitation in Airoli | DANTVED CLINIC',
       description: 'Restore your entire bite, alignment, and smile aesthetics. Expert full mouth reconstruction led by Prosthodontist Dr. Siddharth Vaish in Navi Mumbai.',
       keywords: 'Full Mouth Rehabilitation Airoli, Full Mouth Reconstruction Navi Mumbai, Best Prosthodontist Airoli, Complete Bite Correction',
     },
@@ -397,8 +397,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Fast, safe laser brightening treatments.',
     image: '/treatments/teeth-whitening.png',
     seo: {
-      title: 'Professional Teeth Whitening in Airoli | Dantved Clinic',
-      description: 'Brighten your smile by up to 8 shades in just one hour. Safe, non-invasive laser teeth whitening treatments at Dantved Clinic in Navi Mumbai.',
+      title: 'Professional Teeth Whitening in Airoli | DANTVED CLINIC',
+      description: 'Brighten your smile by up to 8 shades in just one hour. Safe, non-invasive laser teeth whitening treatments at DANTVED CLINIC in Navi Mumbai.',
       keywords: 'Teeth Whitening Airoli, Laser Teeth Bleaching Navi Mumbai, Smile Brightening, Dental Stains Removal',
     },
     h1: 'Laser Teeth Whitening & Brightening',
@@ -427,14 +427,14 @@ export const services: ServiceDetail[] = [
     image: '/treatments/veneers.png',
     seo: {
       title: 'Porcelain Veneers in Airoli, Navi Mumbai | Cosmetic Dentistry',
-      description: 'Transform chipped, discolored, or misaligned teeth with ultra-thin porcelain veneers at Dantved Clinic. Hand-crafted aesthetics for a natural, premium finish.',
+      description: 'Transform chipped, discolored, or misaligned teeth with ultra-thin porcelain veneers at DANTVED CLINIC. Hand-crafted aesthetics for a natural, premium finish.',
       keywords: 'Porcelain Veneers Airoli, Dental Veneers Navi Mumbai, Cosmetic Teeth Laminates, Smile Correction Veneer',
     },
     h1: 'Ultra-Thin Handcrafted Porcelain Veneers',
     heroDescription: 'Bespoke porcelain shells for a flawless, luminous, and perfectly proportioned smile.',
     content: [
       'Porcelain veneers are micro-thin shells of dental ceramic custom-crafted to fit over the front surface of your teeth, instantly correcting cosmetic concerns.',
-      'At Dantved Clinic, we emphasize ultra-conservative preparation, preserving as much of your natural enamel as possible. Veneers are ideal for correcting chips, stubborn discoloration, small gaps, and minor crowding.',
+      'At DANTVED CLINIC, we emphasize ultra-conservative preparation, preserving as much of your natural enamel as possible. Veneers are ideal for correcting chips, stubborn discoloration, small gaps, and minor crowding.',
       'Each veneer is hand-finished by master dental technicians to replicate the translucency, texture, and light-reflecting properties of real teeth, producing a beautiful, long-lasting restoration.'
     ],
     faqs: [
@@ -456,8 +456,8 @@ export const services: ServiceDetail[] = [
     isPopular: true,
     image: '/treatments/smile-designing.png',
     seo: {
-      title: 'Smile Designing & Makeovers in Airoli | Dantved Clinic',
-      description: 'Sculpt your dream smile. Get a personalized digital smile design makeover combining veneers, whitening, and custom alignment at Dantved Clinic Navi Mumbai.',
+      title: 'Smile Designing & Makeovers in Airoli | DANTVED CLINIC',
+      description: 'Sculpt your dream smile. Get a personalized digital smile design makeover combining veneers, whitening, and custom alignment at DANTVED CLINIC Navi Mumbai.',
       keywords: 'Smile Designing Airoli, Cosmetic Makeover Navi Mumbai, Digital Smile Design, Teeth Aesthetics, Smile Makeover Doctor',
     },
     h1: 'Digital Smile Designing Makeovers',
@@ -487,8 +487,8 @@ export const services: ServiceDetail[] = [
     navDescription: 'Traditional and ceramic braces for complex bites.',
     image: '/clinic/treatment-room.jpg',
     seo: {
-      title: 'Orthodontic Braces Treatment in Airoli | Dantved Clinic',
-      description: 'Correct misaligned teeth and complex bite issues with advanced metal and ceramic braces at Dantved Clinic, Airoli. Schedule your orthodontic consultation.',
+      title: 'Orthodontic Braces Treatment in Airoli | DANTVED CLINIC',
+      description: 'Correct misaligned teeth and complex bite issues with advanced metal and ceramic braces at DANTVED CLINIC, Airoli. Schedule your orthodontic consultation.',
       keywords: 'Orthodontic Treatment Airoli, Dental Braces Navi Mumbai, Ceramic Braces, Teeth Alignment Clinic',
     },
     h1: 'Advanced Orthodontic Braces Therapy',
@@ -519,14 +519,14 @@ export const services: ServiceDetail[] = [
     dark: true,
     seo: {
       title: 'Clear Aligners in Airoli, Navi Mumbai | Invisible Braces',
-      description: 'Straighten your teeth comfortably with Clear Aligners at Dantved Clinic, Airoli. Removable, comfortable, and nearly invisible. Book a scan today.',
+      description: 'Straighten your teeth comfortably with Clear Aligners at DANTVED CLINIC, Airoli. Removable, comfortable, and nearly invisible. Book a scan today.',
       keywords: 'Clear Aligners Airoli, Invisible Braces Navi Mumbai, Transparent Aligners, Orthodontic Teeth Straightening',
     },
     h1: 'Invisible Clear Aligners Orthodontics',
     heroDescription: 'Straighten your smile comfortably using nearly invisible custom aligners designed for everyday life.',
     content: [
       'Clear aligners are a modern, comfortable, and virtually invisible orthodontic solution designed to straighten your teeth and correct your bite without the hassle of traditional metal braces.',
-      'At Dantved Clinic, we use advanced 3D intraoral scans to create a precise digital model of your mouth. We then map out your complete treatment plan, showing you how your teeth will shift step-by-step before your aligners are even fabricated.',
+      'At DANTVED CLINIC, we use advanced 3D intraoral scans to create a precise digital model of your mouth. We then map out your complete treatment plan, showing you how your teeth will shift step-by-step before your aligners are even fabricated.',
       'Each set of custom aligners is made of smooth, medical-grade, BPA-free plastic that fits snugly over your teeth, gently and continuously shifting them into their ideal positions.'
     ],
     faqs: [
@@ -550,7 +550,7 @@ export const services: ServiceDetail[] = [
     image: '/clinic/lounge.jpg',
     seo: {
       title: 'Custom Dental Night Guards in Airoli | Teeth Grinding Relief',
-      description: 'Protect your teeth from grinding (bruxism) and prevent enamel wear with a custom-fit, comfortable night guard from Dantved Clinic in Navi Mumbai.',
+      description: 'Protect your teeth from grinding (bruxism) and prevent enamel wear with a custom-fit, comfortable night guard from DANTVED CLINIC in Navi Mumbai.',
       keywords: 'Night Guard Airoli, Dental Splint Navi Mumbai, Teeth Grinding Protector, Bruxism Mouth Guard',
     },
     h1: 'Custom-Fit Protective Night Guards',
@@ -579,7 +579,7 @@ export const services: ServiceDetail[] = [
     image: '/clinic/interior-wide.jpg',
     seo: {
       title: 'TMJ & Bruxism Therapy in Airoli | Jaw Pain Relief',
-      description: 'Get relief from chronic jaw pain, clicking joints, and tension headaches with specialized TMJ and Bruxism therapy at Dantved Clinic, Navi Mumbai.',
+      description: 'Get relief from chronic jaw pain, clicking joints, and tension headaches with specialized TMJ and Bruxism therapy at DANTVED CLINIC, Navi Mumbai.',
       keywords: 'TMJ Therapy Airoli, Jaw Pain Relief Navi Mumbai, TMJ Specialist, Bruxism Treatment Dentist',
     },
     h1: 'Comprehensive TMJ & Bruxism Therapy',

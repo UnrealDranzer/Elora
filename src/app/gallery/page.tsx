@@ -3,17 +3,17 @@ import { BeforeAfterSection } from '@/components/dental/site/before-after-sectio
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Smile Gallery & Case Studies | Dantved Clinic Airoli',
-  description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at Dantved Clinic in Navi Mumbai.',
+  title: 'Smile Gallery & Case Studies | DANTVED CLINIC Airoli',
+  description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at DANTVED CLINIC in Navi Mumbai.',
   keywords: 'Smile Gallery Airoli, Dental Before After Photos, Veneers Results Navi Mumbai, Implant Case Studies',
   alternates: {
     canonical: 'https://www.dantvedclinic.org/gallery',
   },
   openGraph: {
-    title: 'Smile Gallery & Case Studies | Dantved Clinic Airoli',
-    description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at Dantved Clinic in Navi Mumbai.',
+    title: 'Smile Gallery & Case Studies | DANTVED CLINIC Airoli',
+    description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at DANTVED CLINIC in Navi Mumbai.',
     url: 'https://www.dantvedclinic.org/gallery',
-    siteName: 'Dantved Clinic',
+    siteName: 'DANTVED CLINIC',
     images: [
       {
         url: 'https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Smile Gallery & Case Studies | Dantved Clinic Airoli',
-    description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at Dantved Clinic in Navi Mumbai.',
+    title: 'Smile Gallery & Case Studies | DANTVED CLINIC Airoli',
+    description: 'View our smile gallery and see real before & after results of dental implants, veneers, and smile makeovers at DANTVED CLINIC in Navi Mumbai.',
     images: ['https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png'],
   },
   robots: {

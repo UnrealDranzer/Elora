@@ -3,23 +3,23 @@ import { BookingSection } from '@/components/dental/site/booking-section';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact Dantved Clinic | Book Appointment in Airoli',
-  description: 'Contact Dantved Clinic in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
-  keywords: 'Book Dental Appointment Airoli, Contact Dentist Navi Mumbai, Dantved Clinic Address, Dental Emergency Airoli',
+  title: 'Contact DANTVED CLINIC | Book Appointment in Airoli',
+  description: 'Contact DANTVED CLINIC in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
+  keywords: 'Book Dental Appointment Airoli, Contact Dentist Navi Mumbai, DANTVED CLINIC Address, Dental Emergency Airoli',
   alternates: {
     canonical: 'https://www.dantvedclinic.org/contact',
   },
   openGraph: {
-    title: 'Contact Dantved Clinic | Book Appointment in Airoli',
-    description: 'Contact Dantved Clinic in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
+    title: 'Contact DANTVED CLINIC | Book Appointment in Airoli',
+    description: 'Contact DANTVED CLINIC in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
     url: 'https://www.dantvedclinic.org/contact',
-    siteName: 'Dantved Clinic',
+    siteName: 'DANTVED CLINIC',
     images: [
       {
         url: 'https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png',
         width: 1200,
         height: 630,
-        alt: 'Contact Dantved Clinic',
+        alt: 'Contact DANTVED CLINIC',
       },
     ],
     locale: 'en_IN',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Dantved Clinic | Book Appointment in Airoli',
-    description: 'Contact Dantved Clinic in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
+    title: 'Contact DANTVED CLINIC | Book Appointment in Airoli',
+    description: 'Contact DANTVED CLINIC in Airoli, Navi Mumbai. Book an appointment for premium dental care, implants, and cosmetic dentistry.',
     images: ['https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png'],
   },
   robots: {

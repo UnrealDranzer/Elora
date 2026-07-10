@@ -11,7 +11,7 @@ export const Footer = () => (
         <div className="inline-flex h-20 sm:h-24 lg:h-28 items-center relative w-48 sm:w-56 lg:w-64">
           <Image
             src={logoImg}
-            alt="Dantved Clinic Logo"
+            alt="DANTVED CLINIC Logo"
             fill
             sizes="(max-width: 640px) 192px, (max-width: 1024px) 224px, 256px"
             className="object-contain object-center mix-blend-lighten brightness-[1.2]"
@@ -80,7 +80,7 @@ export const Footer = () => (
         <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Find us</p>
         <div className="mt-5 overflow-hidden rounded-2xl border border-ivory/10 shadow-md">
           <iframe
-            title="Dantved Clinic location"
+            title="DANTVED CLINIC location"
             src={siteConfig.mapEmbedUrl}
             className="h-44 w-full"
             loading="lazy"
@@ -93,7 +93,7 @@ export const Footer = () => (
 
     <div className="border-t border-ivory/10 py-6">
       <div className="section-shell flex flex-col items-center justify-between gap-3 text-center text-[0.62rem] uppercase tracking-[0.28em] text-ivory/40 sm:flex-row sm:text-left">
-        <p>© {new Date().getFullYear()} Dantved Clinic. Crafted with care.</p>
+        <p>© {new Date().getFullYear()} DANTVED CLINIC. Crafted with care.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-ivory/70">
             Privacy

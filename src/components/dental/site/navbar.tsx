@@ -120,15 +120,15 @@ export const Navbar = () => {
               className={cn(
                 "relative flex items-center shrink-0 transition-all duration-400",
                 isCompactMode 
-                  ? "w-[180px] h-[56px] sm:w-[200px] sm:h-[60px] lg:w-[240px] lg:h-[72px]" 
-                  : "w-[200px] h-[64px] sm:w-[240px] sm:h-[72px] lg:w-[320px] lg:h-[100px]"
+                  ? "w-[210px] h-[66px] sm:w-[250px] sm:h-[78px] lg:w-[300px] lg:h-[94px]" 
+                  : "w-[240px] h-[75px] sm:w-[300px] sm:h-[94px] lg:w-[400px] lg:h-[125px]"
               )}
             >
               <Image
                 src={logoImg}
-                alt="Dantved Clinic Logo"
+                alt="DANTVED CLINIC Logo"
                 fill
-                sizes="(max-width: 640px) 200px, (max-width: 1024px) 240px, 320px"
+                sizes="(max-width: 640px) 240px, (max-width: 1024px) 300px, 400px"
                 className="object-contain object-center"
                 priority
               />
@@ -198,9 +198,8 @@ export const Navbar = () => {
                   <div className="grid grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8 items-start">
                     {categories.map(category => (
                       <div key={category} className="mb-6 xl:mb-8">
-                        <h3 className="text-sage text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-4 flex items-center justify-between border-b border-charcoal/5 pb-2 sticky top-0 bg-white/95 backdrop-blur z-10 pt-1">
+                        <h3 className="text-sage text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-4 flex items-center border-b border-charcoal/5 pb-2 sticky top-0 bg-white/95 backdrop-blur z-10 pt-1">
                           {category}
-                          <span className="text-muted-foreground/60 tracking-normal lowercase">{groupedServices[category].length} treatments</span>
                         </h3>
                         <ul className="space-y-3 xl:space-y-4">
                           {groupedServices[category].map(service => (

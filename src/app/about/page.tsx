@@ -4,23 +4,23 @@ import { TrustStrip } from '@/components/dental/site/trust-strip';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Dantved Clinic | Best Dental Clinic in Airoli',
-  description: 'Learn about Dantved Clinic, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
-  keywords: 'About Dantved Clinic, Dr Siddharth Vaish, Dentist Airoli, Navi Mumbai Dental Studio, Prosthodontist Doctor',
+  title: 'About DANTVED CLINIC | Best Dental Clinic in Airoli',
+  description: 'Learn about DANTVED CLINIC, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
+  keywords: 'About DANTVED CLINIC, Dr Siddharth Vaish, Dentist Airoli, Navi Mumbai Dental Studio, Prosthodontist Doctor',
   alternates: {
     canonical: 'https://www.dantvedclinic.org/about',
   },
   openGraph: {
-    title: 'About Dantved Clinic | Best Dental Clinic in Airoli',
-    description: 'Learn about Dantved Clinic, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
+    title: 'About DANTVED CLINIC | Best Dental Clinic in Airoli',
+    description: 'Learn about DANTVED CLINIC, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
     url: 'https://www.dantvedclinic.org/about',
-    siteName: 'Dantved Clinic',
+    siteName: 'DANTVED CLINIC',
     images: [
       {
         url: 'https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png',
         width: 1200,
         height: 630,
-        alt: 'About Dantved Clinic',
+        alt: 'About DANTVED CLINIC',
       },
     ],
     locale: 'en_IN',
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Dantved Clinic | Best Dental Clinic in Airoli',
-    description: 'Learn about Dantved Clinic, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
+    title: 'About DANTVED CLINIC | Best Dental Clinic in Airoli',
+    description: 'Learn about DANTVED CLINIC, our experienced team led by Dr. Siddharth Vaish, and our commitment to painless, premium dental care in Airoli, Navi Mumbai.',
     images: ['https://static.prod-images.emergentagent.com/jobs/3ddental/hero-img.png'],
   },
   robots: {

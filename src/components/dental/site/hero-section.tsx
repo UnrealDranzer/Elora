@@ -34,7 +34,7 @@ export const HeroSection = () => {
           </h1>
 
         <p className="max-w-lg text-lg leading-[1.8] text-muted-foreground sm:text-[1.15rem]">
-          Dentistry, practiced with intention. At Dantved, we believe exceptional care begins with listening. Through calm consultations, transparent communication, advanced diagnostics, and precise restorative dentistry, we create smiles that are as healthy as they are enduring.
+          Dentistry, practiced with intention. At DANTVED, we believe exceptional care begins with listening. Through calm consultations, transparent communication, advanced diagnostics, and precise restorative dentistry, we create smiles that are as healthy as they are enduring.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -94,26 +94,6 @@ export const HeroSection = () => {
             sizes="(max-width: 768px) 320px, (max-width: 1024px) 440px, 560px"
             src="https://static.prod-images.emergentagent.com/jobs/36c9215e-a4b6-41d8-bff4-303e6e84e5cc/images/3fb0c93a7aa84b46db864593123c73d242f94e9d2913910d55e6cdc63282e6c2.png"
           />
-          
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-8 -left-2 sm:-left-8 bg-ivory/90 backdrop-blur border border-border rounded-2xl px-4 py-3 shadow-sm z-10"
-          >
-            <p className="text-[10px] uppercase tracking-widest text-sage font-semibold">Precision</p>
-            <p className="text-sm font-medium text-charcoal">0.02mm CAD/CAM</p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute bottom-12 -right-2 sm:-right-6 bg-charcoal text-ivory rounded-2xl px-4 py-3 shadow-md z-10"
-          >
-            <p className="text-[10px] uppercase tracking-widest text-[#D4C3B3] font-semibold">Comfort</p>
-            <p className="text-sm font-medium">Painless protocol</p>
-          </motion.div>
         </motion.div>
       </div>
     </div>

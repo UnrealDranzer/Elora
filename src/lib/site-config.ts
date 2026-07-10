@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: 'Dantved',
-  tagline: 'Clinic',
+  name: 'DANTVED',
+  tagline: 'CLINIC',
   bookingUrl: 'https://appointment.docplix.com/doctor/dpx5952',
   whatsappUrl:
     process.env.NEXT_PUBLIC_WHATSAPP_URL ??
-    'https://wa.me/918143789587?text=Hello%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20Dantved%20Clinic.',
+    'https://wa.me/918143789587?text=Hello%2C%20I%27d%20like%20to%20book%20a%20consultation%20at%20DANTVED%20CLINIC.',
   phone: '+91 81437 89587',
   email: 'dantvedclinic@gmail.com',
   instagramUrl: 'https://www.instagram.com/dr.siddharth_vaish/',
