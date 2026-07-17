@@ -25,7 +25,7 @@ export function SiteWrapper({ children }: { children: React.ReactNode }) {
       <ScrollProgress />
       <LuxuryCursor />
       <Navbar />
-      <main className="pt-24 min-h-screen">
+      <main className="pt-[var(--navbar-height-mobile)] lg:pt-[var(--navbar-height-desktop)] min-h-screen">
         {children}
       </main>
       <Footer />

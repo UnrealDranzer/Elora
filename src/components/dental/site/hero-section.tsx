@@ -17,7 +17,7 @@ export const HeroSection = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden pt-28 pb-16 dot-grid lg:pt-32">
+    <section className="relative min-h-[100svh] overflow-hidden pt-[calc(var(--navbar-height-mobile)+1rem)] pb-16 dot-grid lg:pt-[calc(var(--navbar-height-desktop)+2rem)]">
       <div className="section-shell grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:pb-32 lg:pt-16">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

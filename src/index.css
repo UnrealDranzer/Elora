@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --navbar-height-desktop: 256px;
+  --navbar-height-mobile: 121px;
   --background: 40 27% 95%;
   --foreground: 0 0% 10%;
   --muted: 38 22% 90%;

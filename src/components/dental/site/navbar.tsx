@@ -120,15 +120,15 @@ export const Navbar = () => {
               className={cn(
                 "relative flex items-center shrink-0 transition-all duration-400",
                 isCompactMode 
-                  ? "w-[210px] h-[66px] sm:w-[250px] sm:h-[78px] lg:w-[300px] lg:h-[94px]" 
-                  : "w-[240px] h-[75px] sm:w-[300px] sm:h-[94px] lg:w-[400px] lg:h-[125px]"
+                  ? "w-[220px] h-[69px] sm:w-[260px] sm:h-[81px] lg:w-[350px] lg:h-[110px]" 
+                  : "w-[260px] h-[81px] sm:w-[320px] sm:h-[100px] lg:w-[460px] lg:h-[144px]"
               )}
             >
               <Image
                 src={logoImg}
                 alt="DANTVED CLINIC Logo"
                 fill
-                sizes="(max-width: 640px) 240px, (max-width: 1024px) 300px, 400px"
+                sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 460px"
                 className="object-contain object-center"
                 priority
               />
