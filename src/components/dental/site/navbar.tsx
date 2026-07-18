@@ -64,6 +64,7 @@ export const Navbar = () => {
   }, []);
 
   return (
+    <>
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-[70] transition-colors duration-500',
@@ -405,31 +406,58 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
 
-      {/* MOBILE MENU */}
-      <AnimatePresence>
-        {open && (
+    </header>
+
+    {/* MOBILE MENU — rendered OUTSIDE <header> as an independent fixed layer.
+
+        Root cause of all mobile navigation issues:
+        A scrollable container (overflow-y:auto) nested inside a position:fixed
+        <header> does NOT receive touch scroll events on iOS Safari. The browser
+        intercepts all touch gestures for document-level scroll, making the inner
+        overflow container unreachable via touch. The same interception swallows
+        tap events on the first contact, causing links to require multiple taps.
+
+        Fix: render the panel as its own position:fixed element at the root level,
+        not inside <header>. At this stacking level overflow-y:auto works natively
+        on every platform. Desktop navigation (z-[70]) is completely unaffected. */}
+    <AnimatePresence>
+      {open && (
+        <>
+          {/* Transparent backdrop — tap anywhere outside the panel to close */}
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-charcoal/5 bg-ivory/95 backdrop-blur-xl lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[65] bg-charcoal/10 lg:hidden"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Scrollable menu panel — positioned immediately below the navbar */}
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed left-0 right-0 z-[68] bg-ivory/95 backdrop-blur-xl border-t border-charcoal/5 shadow-xl lg:hidden overflow-y-auto"
+            style={{
+              top: 'var(--navbar-height-mobile)',
+              maxHeight: 'calc(100vh - var(--navbar-height-mobile))',
+            }}
           >
-            {/* Scroll container is separate from the Framer Motion height-clip wrapper.
-                Combining overflow-hidden (needed for height animation) and overflow-y-auto
-                on the same element conflicts — the element cannot simultaneously clip for
-                animation and scroll. Separating them fixes mobile menu scrollability. */}
-            <nav className="section-shell flex flex-col gap-2 py-6 max-h-[80vh] overflow-y-auto" aria-label="Mobile Navigation">
-              
-              {/* Mobile Services Accordion */}
+            <nav className="section-shell flex flex-col gap-2 py-6" aria-label="Mobile Navigation">
+
+              {/* Services Accordion */}
               <div className="rounded-2xl bg-white/50 border border-charcoal/5 overflow-hidden">
-                <button 
+                <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className="w-full flex items-center justify-between px-5 py-4 text-sm uppercase tracking-[0.15em] text-foreground font-semibold"
                 >
                   Treatments & Services
                   <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", mobileServicesOpen && "rotate-180")} />
                 </button>
-                
+
                 <AnimatePresence>
                   {mobileServicesOpen && (
                     <motion.div
@@ -446,14 +474,14 @@ export const Navbar = () => {
                             </h4>
                             <div className="flex flex-col gap-3 pl-2 border-l-2 border-warm">
                               {groupedServices[category].map(service => (
-                                <a 
-                                  key={service.slug} 
+                                <a
+                                  key={service.slug}
                                   href={`/services/${service.slug}`}
                                   onClick={() => setOpen(false)}
-                                  className="text-sm text-charcoal/80 flex items-center gap-2"
+                                  className="text-sm text-charcoal/80 flex items-center gap-2 py-1"
                                 >
                                   {service.title}
-                                  {service.isPopular && <span className="w-1.5 h-1.5 rounded-full bg-sage"></span>}
+                                  {service.isPopular && <span className="w-1.5 h-1.5 rounded-full bg-sage" />}
                                 </a>
                               ))}
                             </div>
@@ -475,7 +503,7 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              
+
               <a
                 href={siteConfig.bookingUrl}
                 target="_blank"
@@ -487,8 +515,9 @@ export const Navbar = () => {
               </a>
             </nav>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+        </>
+      )}
+    </AnimatePresence>
+  </>
   );
 };
