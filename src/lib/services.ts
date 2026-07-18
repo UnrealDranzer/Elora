@@ -33,7 +33,7 @@ export const services: ServiceDetail[] = [
     title: 'Oral Prophylaxis',
     category: 'Preventive',
     navDescription: 'Professional ultrasonic cleaning and polishing.',
-    image: '/clinic/treatment-room.jpg',
+    image: '/treatments/oral-prophylaxis.png',
     seo: {
       title: 'Oral Prophylaxis & Teeth Cleaning in Airoli | DANTVED CLINIC',
       description: 'Professional ultrasonic teeth cleaning and polishing to prevent cavities and gum disease. Book your routine oral prophylaxis at DANTVED CLINIC, Airoli.',
@@ -62,7 +62,7 @@ export const services: ServiceDetail[] = [
     title: 'Gum Therapy',
     category: 'Preventive',
     navDescription: 'Advanced periodontal care for healthy gums.',
-    image: '/clinic/exterior.jpg',
+    image: '/treatments/gum-therapy.png',
     seo: {
       title: 'Gum Therapy & Periodontal Care in Airoli | DANTVED CLINIC',
       description: 'Expert periodontal treatments to cure bleeding gums and gingivitis. Restore your gum health at DANTVED CLINIC in Navi Mumbai.',
@@ -93,7 +93,7 @@ export const services: ServiceDetail[] = [
     title: 'Fillings & Restorations',
     category: 'Restorative',
     navDescription: 'Tooth-colored composite restorations.',
-    image: '/clinic/treatment-room.jpg',
+    image: '/treatments/fillings.png',
     seo: {
       title: 'Tooth-Colored Fillings in Airoli | DANTVED CLINIC',
       description: 'Restore decayed or chipped teeth invisibly with premium composite fillings. Safe, durable, and aesthetically perfect dental restorations in Navi Mumbai.',
@@ -151,7 +151,7 @@ export const services: ServiceDetail[] = [
     title: 'Dental Crowns',
     category: 'Restorative',
     navDescription: 'Premium zirconia and ceramic protective caps.',
-    image: '/clinic/interior-wide.jpg',
+    image: '/treatments/crowns.png',
     seo: {
       title: 'Zirconia & Ceramic Dental Crowns in Airoli | DANTVED CLINIC',
       description: 'Protect damaged teeth with high-strength, natural-looking Zirconia and E-max ceramic crowns. Precision fit and long-lasting durability in Navi Mumbai.',
@@ -180,7 +180,7 @@ export const services: ServiceDetail[] = [
     title: 'Dental Bridges',
     category: 'Restorative',
     navDescription: 'Fixed replacement for one or more missing teeth.',
-    image: '/clinic/lounge.jpg',
+    image: '/treatments/bridges.png',
     seo: {
       title: 'Fixed Dental Bridges in Airoli | DANTVED CLINIC',
       description: 'Replace missing teeth rapidly with custom fixed dental bridges. Highly aesthetic and durable ceramic restorations at DANTVED CLINIC, Navi Mumbai.',
@@ -364,7 +364,7 @@ export const services: ServiceDetail[] = [
     title: 'Maxillofacial Prosthesis',
     category: 'Prosthodontics',
     navDescription: 'Rehabilitation of oral and facial defects.',
-    image: '/clinic/certificates.jpg',
+    image: '/treatments/maxillofacial-prosthesis.png',
     seo: {
       title: 'Maxillofacial Prosthesis in Airoli | Dr. Siddharth Vaish',
       description: 'Specialized maxillofacial prosthetics to restore oral and facial defects caused by trauma, surgery, or congenital conditions. Expert care by Dr. Siddharth Vaish.',
@@ -485,7 +485,7 @@ export const services: ServiceDetail[] = [
     title: 'Orthodontic Treatment',
     category: 'Alignment',
     navDescription: 'Traditional and ceramic braces for complex bites.',
-    image: '/clinic/treatment-room.jpg',
+    image: '/treatments/orthodontic-treatment.png',
     seo: {
       title: 'Orthodontic Braces Treatment in Airoli | DANTVED CLINIC',
       description: 'Correct misaligned teeth and complex bite issues with advanced metal and ceramic braces at DANTVED CLINIC, Airoli. Schedule your orthodontic consultation.',
@@ -547,7 +547,7 @@ export const services: ServiceDetail[] = [
     title: 'Custom Night Guards',
     category: 'Functional / TMJ',
     navDescription: 'Protect enamel from heavy grinding.',
-    image: '/clinic/lounge.jpg',
+    image: '/treatments/night-guards.png',
     seo: {
       title: 'Custom Dental Night Guards in Airoli | Teeth Grinding Relief',
       description: 'Protect your teeth from grinding (bruxism) and prevent enamel wear with a custom-fit, comfortable night guard from DANTVED CLINIC in Navi Mumbai.',
@@ -576,7 +576,7 @@ export const services: ServiceDetail[] = [
     title: 'TMJ & Bruxism Therapy',
     category: 'Functional / TMJ',
     navDescription: 'Relief for jaw joint pain and tension.',
-    image: '/clinic/interior-wide.jpg',
+    image: '/treatments/tmj-therapy.png',
     seo: {
       title: 'TMJ & Bruxism Therapy in Airoli | Jaw Pain Relief',
       description: 'Get relief from chronic jaw pain, clicking joints, and tension headaches with specialized TMJ and Bruxism therapy at DANTVED CLINIC, Navi Mumbai.',

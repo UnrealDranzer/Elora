@@ -25,7 +25,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(true);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(true);
   const [hoveredService, setHoveredService] = useState<ServiceDetail | null>(null);
 
@@ -40,11 +40,16 @@ export const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = (open || desktopMenuOpen) ? 'hidden' : '';
+    // Only lock body scroll for the desktop slide-over drawer.
+    // The mobile dropdown sits inside the fixed header and does NOT need a
+    // body scroll lock — setting overflow:hidden on body when the mobile
+    // dropdown is open blocks touch events on <a> links inside fixed elements
+    // on iOS Safari, causing intermittent navigation failures.
+    document.body.style.overflow = desktopMenuOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [open, desktopMenuOpen]);
+  }, [desktopMenuOpen]);
 
   // Handle ESC to close menus
   useEffect(() => {
@@ -73,7 +78,7 @@ export const Navbar = () => {
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className={cn(
             "grid grid-cols-[1fr_auto_1fr] items-center",
-            isCompactMode ? "py-3 lg:py-4" : "pt-6 pb-4 lg:pt-8 lg:pb-6"
+            isCompactMode ? "py-3 lg:py-4" : "pt-2 pb-1 lg:pt-3 lg:pb-2"
           )}
         >
           
@@ -157,7 +162,7 @@ export const Navbar = () => {
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="hidden lg:flex items-center justify-center gap-10 pb-6 lg:pb-8 overflow-hidden" 
+              className="hidden lg:flex items-center justify-center gap-10 pb-3 lg:pb-4 overflow-hidden" 
               aria-label="Main Navigation"
             >
               <div 
@@ -407,9 +412,13 @@ export const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-charcoal/5 bg-ivory/95 backdrop-blur-xl lg:hidden max-h-[80vh] overflow-y-auto"
+            className="overflow-hidden border-t border-charcoal/5 bg-ivory/95 backdrop-blur-xl lg:hidden"
           >
-            <nav className="section-shell flex flex-col gap-2 py-6" aria-label="Mobile Navigation">
+            {/* Scroll container is separate from the Framer Motion height-clip wrapper.
+                Combining overflow-hidden (needed for height animation) and overflow-y-auto
+                on the same element conflicts — the element cannot simultaneously clip for
+                animation and scroll. Separating them fixes mobile menu scrollability. */}
+            <nav className="section-shell flex flex-col gap-2 py-6 max-h-[80vh] overflow-y-auto" aria-label="Mobile Navigation">
               
               {/* Mobile Services Accordion */}
               <div className="rounded-2xl bg-white/50 border border-charcoal/5 overflow-hidden">

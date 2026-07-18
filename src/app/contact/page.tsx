@@ -40,9 +40,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <SiteWrapper>
-      <div className="pt-12">
-        <BookingSection />
-      </div>
+      <BookingSection />
     </SiteWrapper>
   );
 }
