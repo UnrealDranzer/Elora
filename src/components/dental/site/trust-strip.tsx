@@ -18,7 +18,7 @@ const TrustItem = ({ text }: { text: string }) => (
 export const TrustStrip = () => (
   <section className="overflow-hidden border-y border-border/40 bg-warm/50 py-7">
     <div className="relative flex w-full">
-      <div className="flex w-max animate-trust-scroll gap-6 whitespace-nowrap pl-6 motion-reduce:animate-none hover:pause-animation">
+      <div className="flex w-max animate-trust-scroll gap-6 whitespace-nowrap pl-6 motion-reduce:animate-none">
         {[...items, ...items, ...items, ...items, ...items, ...items].map((item, i) => (
           <TrustItem key={`${item}-${i}`} text={item} />
         ))}

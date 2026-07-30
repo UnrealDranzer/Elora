@@ -44,10 +44,11 @@ export const LoadingScreen = () => {
               />
             </div>
 
-            {/* Tagline — keeps the screen consistent when logo image is loading */}
-            <p className="text-[0.6rem] uppercase tracking-[0.45em] text-muted-foreground">
-              Dental · Implants · Aesthetics
-            </p>
+            {/* Clinic name — visible immediately, same as old splash treatment */}
+            <div className="text-center">
+              <p className="font-display text-3xl tracking-[0.08em] text-charcoal sm:text-4xl">DANTVED</p>
+              <p className="text-[0.6rem] uppercase tracking-[0.42em] text-muted-foreground">CLINIC</p>
+            </div>
           </motion.div>
         </motion.div>
       )}
