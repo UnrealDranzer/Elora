@@ -1,7 +1,7 @@
 "use client";
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
-import { Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 
 type Review = {
@@ -36,6 +36,7 @@ const reviews: Review[] = [
   }
 ];
 
+/* Google "G" coloured icon */
 const GoogleIcon = () => (
   <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -45,11 +46,28 @@ const GoogleIcon = () => (
   </svg>
 );
 
+/* Inline-filled star — avoids Tailwind fill-* vs SVG presentation-attribute conflict */
+const FilledStar = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+    style={{ fill: '#fbbf24', flexShrink: 0 }}
+  >
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+/* Google Maps reviews page for the clinic */
+const GOOGLE_REVIEWS_URL =
+  'https://www.google.com/maps/place/DANTVED+CLINIC/@19.1605923,72.9896933,17z/data=!4m8!3m7!1s0x3be7b91e65dd2cb7:0xd2cc2d6a677ce2e3!8m2!3d19.1605974!4d72.9921395!9m1!1b1!16s%2Fg%2F11myqlzm5y?entry=ttu&g_ep=EgoyMDI2MDcyNy4wIKXMDSoASAFQAw%3D%3D';
+
 export const TestimonialsSection = () => (
   <section id="reviews" className="py-24 sm:py-32">
     <div className="section-shell">
 
-      {/* Header — reduced mb-14 → mb-8 so cards feel visually connected to the heading */}
+      {/* Header */}
       <div className="mb-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <SectionLabel index="06" title="Reviews" />
@@ -58,14 +76,14 @@ export const TestimonialsSection = () => (
           </h2>
         </div>
         <a
-          href={siteConfig.mapsUrl}
+          href={GOOGLE_REVIEWS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-charcoal transition-colors duration-300"
         >
           <div className="flex gap-0.5" aria-hidden="true">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <FilledStar key={i} size={16} />
             ))}
           </div>
           <span>4.9 / 5 · Google verified</span>
@@ -108,9 +126,10 @@ export const TestimonialsSection = () => (
                 </div>
               </div>
 
+              {/* Filled stars — inline SVG bypasses the CSS/presentation-attribute conflict */}
               <div className="flex gap-0.5 mb-4" aria-hidden="true">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  <FilledStar key={i} size={16} />
                 ))}
               </div>
 
@@ -119,7 +138,7 @@ export const TestimonialsSection = () => (
               </p>
             </div>
 
-            {/* Card footer — "View on Google" replaces the misleading "Read Full Review" */}
+            {/* Card footer */}
             <div className="mt-8 flex items-center justify-between border-t border-[#D4C3B3]/25 pt-4">
               <span className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-muted-foreground group-hover:text-charcoal transition-colors duration-300">
                 View on Google
@@ -130,10 +149,10 @@ export const TestimonialsSection = () => (
         ))}
       </div>
 
-      {/* View All Reviews CTA — primary action below the grid */}
+      {/* View All Reviews CTA — links to Google Maps reviews page */}
       <div className="mt-10 flex justify-center">
         <a
-          href={siteConfig.mapsUrl}
+          href={GOOGLE_REVIEWS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="pill-btn-light group inline-flex items-center gap-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"

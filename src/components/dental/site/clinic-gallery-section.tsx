@@ -1,6 +1,7 @@
 "use client";
 import { cn } from '@/lib/utils';
 import { GalleryLightbox, type GalleryImage } from '@/components/dental/gallery-lightbox';
+import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { siteConfig } from '@/lib/site-config';
@@ -48,9 +49,7 @@ export const ClinicGallerySection = () => {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-xl"
             >
-              <p className="text-[0.65rem] uppercase tracking-[0.35em] text-sage/80 mb-5">
-                Our Space
-              </p>
+              <SectionLabel index="01" title="Our Space" />
               <h2 className="font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-[1.05] text-charcoal">
                 Inside <em className="font-light italic text-charcoal/85">DANTVED CLINIC</em>
               </h2>

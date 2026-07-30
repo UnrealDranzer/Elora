@@ -21,23 +21,33 @@ export const LoadingScreen = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
+          {/*
+            Single unified splash — identical on all devices (mobile, tablet, desktop).
+            Logo image is the primary brand element; text beneath reinforces the name.
+            Fixed pixel dimensions prevent layout shift before the image paints.
+          */}
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center justify-center"
+            className="flex flex-col items-center gap-4"
           >
-            {/* Official Dantved logo — sized to prevent layout shift */}
-            <div className="relative w-[260px] h-[81px] sm:w-[320px] sm:h-[100px]">
+            {/* Logo — larger on all breakpoints */}
+            <div className="relative w-[300px] h-[94px] sm:w-[400px] sm:h-[125px] lg:w-[480px] lg:h-[150px]">
               <Image
                 src={logoImg}
                 alt="DANTVED CLINIC"
                 fill
-                sizes="(max-width: 640px) 260px, 320px"
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 480px"
                 className="object-contain object-center"
                 priority
               />
             </div>
+
+            {/* Tagline — keeps the screen consistent when logo image is loading */}
+            <p className="text-[0.6rem] uppercase tracking-[0.45em] text-muted-foreground">
+              Dental · Implants · Aesthetics
+            </p>
           </motion.div>
         </motion.div>
       )}
