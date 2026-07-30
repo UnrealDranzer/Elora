@@ -5,8 +5,10 @@ import logoImg from '../../../../public/logo-dantved.png';
 
 export const Footer = () => (
   <footer className="bg-charcoal pt-16 text-ivory">
-    <div className="section-shell grid gap-12 pb-14 lg:grid-cols-4">
-      <div className="lg:col-span-1">
+    <div className="section-shell grid gap-12 pb-14 lg:grid-cols-3">
+
+      {/* Column 1 — Brand, tagline, social */}
+      <div>
         {/* Logo blended into dark background — mix-blend-lighten preserves gold */}
         <div className="inline-flex h-20 sm:h-24 lg:h-28 items-center relative w-48 sm:w-56 lg:w-64">
           <Image
@@ -33,62 +35,78 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div>
-        <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Visit</p>
-        <ul className="mt-5 space-y-3 text-sm text-ivory/75">
-          <li className="flex gap-2">
-            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
-            <a
-              href={siteConfig.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-ivory transition-colors"
-            >
-              {siteConfig.address.line1}
-              <br />
-              {siteConfig.address.line2}
-            </a>
-          </li>
-          <li className="flex gap-2">
-            <Phone className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
-            <a href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} className="hover:text-ivory">
-              {siteConfig.phone}
-            </a>
-          </li>
-          <li className="flex gap-2">
-            <Mail className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
-            <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory">
-              {siteConfig.email}
-            </a>
-          </li>
-        </ul>
+      {/* Column 2 — Clinic Hours & Contact */}
+      <div className="flex flex-col gap-8">
+        {/* Hours */}
+        <div>
+          <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Clinic Hours</p>
+          {/* Two-row timings layout: Day label + hours on separate lines */}
+          <ul className="mt-5 space-y-4 text-sm text-ivory/75">
+            <li>
+              <p className="text-[0.6rem] uppercase tracking-[0.28em] text-ivory/40 mb-1">Monday – Saturday</p>
+              <p>10:00 AM – 3:00 PM</p>
+              <p>4:00 PM – 9:30 PM</p>
+            </li>
+            <li>
+              <p className="text-[0.6rem] uppercase tracking-[0.28em] text-ivory/40 mb-1">Sunday</p>
+              <p>10:00 AM – 2:00 PM</p>
+            </li>
+          </ul>
+          <p className="mt-5 flex items-center gap-2 text-xs text-ivory/55">
+            <Clock className="h-3.5 w-3.5 text-sage" aria-hidden="true" />
+            Our team replies within 1 hour
+          </p>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Contact</p>
+          <ul className="mt-5 space-y-3 text-sm text-ivory/75">
+            <li className="flex gap-2">
+              <Phone className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
+              <a href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} className="hover:text-ivory transition-colors">
+                {siteConfig.phone}
+              </a>
+            </li>
+            <li className="flex gap-2">
+              <Mail className="h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-ivory transition-colors">
+                {siteConfig.email}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
+      {/* Column 3 — Address & Map grouped together */}
       <div>
-        <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Hours</p>
-        <ul className="mt-5 space-y-2 text-sm text-ivory/75">
-          <li>Mon – Sat · {siteConfig.openingHours.weekdays}</li>
-          <li>Sunday · {siteConfig.openingHours.sunday}</li>
-        </ul>
-        <p className="mt-5 flex items-center gap-2 text-xs text-ivory/55">
-          <Clock className="h-3.5 w-3.5 text-sage" aria-hidden="true" />
-          Our team replies within 1 hour
-        </p>
-      </div>
-
-      <div>
-        <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Find us</p>
-        <div className="mt-5 overflow-hidden rounded-2xl border border-ivory/10 shadow-md">
+        <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ivory/45">Find Us</p>
+        <div className="mt-5 flex items-start gap-2 text-sm text-ivory/75">
+          <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sage" aria-hidden="true" />
+          <a
+            href={siteConfig.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-ivory transition-colors leading-relaxed"
+          >
+            {siteConfig.address.line1}
+            <br />
+            {siteConfig.address.line2}
+          </a>
+        </div>
+        {/* Map sits directly below the address — grouped together in the same column */}
+        <div className="mt-4 overflow-hidden rounded-2xl border border-ivory/10 shadow-md">
           <iframe
             title="DANTVED CLINIC location"
             src={siteConfig.mapEmbedUrl}
-            className="h-44 w-full"
+            className="h-36 w-full"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
         </div>
       </div>
+
     </div>
 
     <div className="border-t border-ivory/10 py-6">

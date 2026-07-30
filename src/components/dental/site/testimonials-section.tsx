@@ -1,7 +1,7 @@
 "use client";
 import { SectionLabel } from '@/components/dental/ui/section-label';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 
 type Review = {
@@ -48,7 +48,9 @@ const GoogleIcon = () => (
 export const TestimonialsSection = () => (
   <section id="reviews" className="py-24 sm:py-32">
     <div className="section-shell">
-      <div className="mb-14 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+
+      {/* Header — reduced mb-14 → mb-8 so cards feel visually connected to the heading */}
+      <div className="mb-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <SectionLabel index="06" title="Reviews" />
           <h2 className="mt-5 font-display text-[clamp(2.2rem,5vw,3.5rem)] leading-tight">
@@ -70,6 +72,7 @@ export const TestimonialsSection = () => (
         </a>
       </div>
 
+      {/* Review Cards */}
       <div className="grid gap-6 lg:gap-8 lg:grid-cols-3">
         {reviews.map((review, i) => (
           <motion.a
@@ -116,15 +119,30 @@ export const TestimonialsSection = () => (
               </p>
             </div>
 
+            {/* Card footer — "View on Google" replaces the misleading "Read Full Review" */}
             <div className="mt-8 flex items-center justify-between border-t border-[#D4C3B3]/25 pt-4">
               <span className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-muted-foreground group-hover:text-charcoal transition-colors duration-300">
-                Read Full Review
+                View on Google
               </span>
-              <span className="text-muted-foreground opacity-60 text-xs">→</span>
+              <span className="text-muted-foreground opacity-60 text-xs">↗</span>
             </div>
           </motion.a>
         ))}
       </div>
+
+      {/* View All Reviews CTA — primary action below the grid */}
+      <div className="mt-10 flex justify-center">
+        <a
+          href={siteConfig.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pill-btn-light group inline-flex items-center gap-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-md"
+        >
+          View All Reviews
+          <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
+        </a>
+      </div>
+
     </div>
   </section>
 );
