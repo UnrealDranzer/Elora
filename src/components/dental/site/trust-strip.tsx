@@ -1,3 +1,16 @@
+/* Inline keyframes guarantee the animation runs on all browsers/devices
+   regardless of Tailwind JIT compilation or OS reduced-motion settings. */
+const marqueeStyle = `
+@keyframes dv-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.dv-marquee {
+  animation: dv-marquee 28s linear infinite;
+  will-change: transform;
+}
+`;
+
 const items = [
   'Pain-Free Dentistry',
   'Award-Winning Clinicians',
@@ -17,8 +30,15 @@ const TrustItem = ({ text }: { text: string }) => (
 
 export const TrustStrip = () => (
   <section className="overflow-hidden border-y border-border/40 bg-warm/50 py-7">
+    {/* Inject keyframes scoped to this component */}
+    <style>{marqueeStyle}</style>
+
     <div className="relative flex w-full">
-      <div className="flex w-max animate-trust-scroll gap-6 whitespace-nowrap pl-6 motion-reduce:animate-none">
+      {/* 6 copies → translateX(-50%) creates a perfect seamless loop */}
+      <div
+        className="dv-marquee flex w-max gap-6 whitespace-nowrap pl-6"
+        aria-hidden="false"
+      >
         {[...items, ...items, ...items, ...items, ...items, ...items].map((item, i) => (
           <TrustItem key={`${item}-${i}`} text={item} />
         ))}
@@ -26,4 +46,3 @@ export const TrustStrip = () => (
     </div>
   </section>
 );
-

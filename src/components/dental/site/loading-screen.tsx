@@ -21,18 +21,13 @@ export const LoadingScreen = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/*
-            Single unified splash — identical on all devices (mobile, tablet, desktop).
-            Logo image is the primary brand element; text beneath reinforces the name.
-            Fixed pixel dimensions prevent layout shift before the image paints.
-          */}
+          {/* Single unified splash — logo only, identical on all devices */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col items-center gap-4"
+            className="flex items-center justify-center"
           >
-            {/* Logo — larger on all breakpoints */}
             <div className="relative w-[300px] h-[94px] sm:w-[400px] sm:h-[125px] lg:w-[480px] lg:h-[150px]">
               <Image
                 src={logoImg}
@@ -42,12 +37,6 @@ export const LoadingScreen = () => {
                 className="object-contain object-center"
                 priority
               />
-            </div>
-
-            {/* Clinic name — visible immediately, same as old splash treatment */}
-            <div className="text-center">
-              <p className="font-display text-3xl tracking-[0.08em] text-charcoal sm:text-4xl">DANTVED</p>
-              <p className="text-[0.6rem] uppercase tracking-[0.42em] text-muted-foreground">CLINIC</p>
             </div>
           </motion.div>
         </motion.div>
